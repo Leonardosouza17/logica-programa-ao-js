@@ -1,2 +1,2 @@
-# logica-programa-ao-js
+# logica-programacao-js
 Treinando a lógica de programação com JavaScript
