@@ -19,22 +19,22 @@ const temperatura = window.prompt('digite a temperatura'),
       KC = temperatura + 273.15,
       KF = temperatura * 9/5 - 459.67;
 
-      if  ( atual == "C" || == "c" && conversao == "F" || == "f"){ 
+      if  ( atual == "C" ||  "c" && conversao == "F" ||  "f"){ 
         window.alert (`temperatura = ${CF} `); 
         }
-        else if ( atual == "C" || == "c" && conversao == "K" || == "k" ){ 
+        else if ( atual == "C" ||  "c" && conversao == "K" || "k" ){ 
           window.alert (`temperatura = ${CK}`);
       }
-        else if ( atual == "F" || == "f" && conversao == "C" || == "c"){
+        else if ( atual == "F" ||  "f" && conversao == "C" ||  "c"){
            window.alert (`temperatura = ${FC}`);
         }
-        else if ( atual == "F" || == "f" && conversao == "K" || == "k"){
+        else if ( atual == "F" ||  "f" && conversao == "K" ||  "k"){
           window.alert (`temperatura = ${FK}`);
         }
-        else if (atual == "K" || == "k" && conversao == "C" || == "c"){
+        else if (atual == "K" ||  "k" && conversao == "C" ||  "c"){
           window.alert (`temperatura = ${KC}`);
         }
-        else if ( atual == "K" || == "k" && conversao == "F" || == "f" ){
+        else if ( atual == "K" ||  "k" && conversao == "F" ||  "f" ){
           window.alert (`temperatura = ${KF}`);
         }
         else {

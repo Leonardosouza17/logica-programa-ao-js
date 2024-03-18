@@ -114,19 +114,18 @@ Usamos **TRUE** e **FALSE**
 
 
  ## operadores lógicos:
+const a = false, b = true;
+
+if (a || b) {
+    console.log('VERDADEIRO');
+} else {
+    console.log('FALSO');
+}
 
 
 
 
-
-
-
-
-
-
-
-
- ## desafio 1:
+## desafio 1:
  const  nota1 = 7, nota2 = 5, nota3 = 4;
 const media = (nota1 + nota2 + nota3) /3;
 
