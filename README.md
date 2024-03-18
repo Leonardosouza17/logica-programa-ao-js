@@ -172,5 +172,5 @@ if ( imc <= 18.5 ) {
     window.alert(`Obesidade grau III ${imc.toFixed(2)}`);
 }
 
-##desafio 3:
+## desafio 3:
 

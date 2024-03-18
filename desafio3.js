@@ -7,22 +7,37 @@
 //t°C = (t°F - 32) * 5/9
 //tK = 
 
-const valortemperatura = window.prompt('digita a temperatura'),
-      unidadetemperatura = window.prompt('informe a unidade de temperatura que deseja converter'),
-      conversao = window.prompt('informe para qual escala você deseja converter'),
+const temperatura = window.prompt('digite a temperatura'),
+      atual = window.prompt('informe a unidade de temperatura atual para converter'),
+      conversao = window.prompt('informe para qual escala você deseja converter');
       
-      tC =,
-      tF =,
-      tK =,
-      Celsiusfahrenheit = tF = (tC * 9/5) + 32,
-      Celsiuskelvin = tK = tC + 273.15,
-      Fahrenheitcelsius = tC = (tF - 32) * 5/9,
-      Fahrenheitkelvin = tK = (tF + 459.67) * 5/9,
-      kelvincelsius = tC = tK + 273.15,
-      kelvinfahrenheit = tF = tK * 9/5 - 459.67
+      const 
+      CF = (temperatura * 9/5) + 32,
+      CK = temperatura + 273.15,
+      FC = (temperatura - 32) * 5/9,
+      FK = (temperatura + 459.67) * 5/9,
+      KC = temperatura + 273.15,
+      KF = temperatura * 9/5 - 459.67;
 
-      if ( tF = tC * 9/5 + 32) {
-        window.alert
-      } else if (tK ) {
-
+      if  ( atual == "C" || == "c" && conversao == "F" || == "f"){ 
+        window.alert (`temperatura = ${CF} `); 
+        }
+        else if ( atual == "C" || == "c" && conversao == "K" || == "k" ){ 
+          window.alert (`temperatura = ${CK}`);
       }
+        else if ( atual == "F" || == "f" && conversao == "C" || == "c"){
+           window.alert (`temperatura = ${FC}`);
+        }
+        else if ( atual == "F" || == "f" && conversao == "K" || == "k"){
+          window.alert (`temperatura = ${FK}`);
+        }
+        else if (atual == "K" || == "k" && conversao == "C" || == "c"){
+          window.alert (`temperatura = ${KC}`);
+        }
+        else if ( atual == "K" || == "k" && conversao == "F" || == "f" ){
+          window.alert (`temperatura = ${KF}`);
+        }
+        else {
+          window.alert (` Temperatura não reconhecida`);
+        }
+    
