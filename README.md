@@ -111,3 +111,66 @@ Usamos **TRUE** e **FALSE**
  >= maior OU igual
 
  <= menor OU igual
+
+
+ ## operadores lógicos:
+
+
+
+
+
+
+
+
+
+
+
+
+ ## desafio 1:
+ const  nota1 = 7, nota2 = 5, nota3 = 4;
+const media = (nota1 + nota2 + nota3) /3;
+
+
+
+if ( media >= 7) {
+    console.log(`aprovado com nota ${media.toFixed(2)}`);
+   
+} else if (media >= 5) {
+    console.log(`exame com nota ${media.toFixed(2)}`);
+    
+} else  {
+    console.log(`reprovado com nota ${media.toFixed(2)}`);
+    
+}
+
+
+## desafio 2:
+
+const 
+      inf = window.alert('Essa calculadora que está sendo apresentada para você fazer o calculo do seu IMC,não possuí fixação de gênero ou idade,funciona para todos os casos. Mesmo descobrindo se o seu peso está ideal ou não,o médico,nutricionista e um especialista deverá ser consultado,para que esclareça tudo sobre a sua saúde em geral. '),
+      altura =  window.prompt('digite sua altura'),
+      peso = window.prompt('digite seu peso'), 
+      imc = peso / (altura **2);
+
+      
+if ( imc <= 18.5 ) {
+        window.alert(` Abaixo do peso ${imc.toFixed(2)}`);
+
+} else if (imc <= 24.9 ){
+    window.alert(`Peso normal ${imc.toFixed(2)}`);
+
+} else if (imc <= 29.9) {
+    window.alert(`Sobrepeso ${imc.toFixed(2)}`);
+
+} else if (imc <= 34.9) {
+    window.alert(`Obesidade grau I ${imc.toFixed(2)}`);
+
+} else  if (imc <= 39.9) {
+    window.alert( `Obesidade grau II ${imc.toFixed(2)}`);
+
+} else  {
+    window.alert(`Obesidade grau III ${imc.toFixed(2)}`);
+}
+
+##desafio 3:
+

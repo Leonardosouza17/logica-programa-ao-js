@@ -3,18 +3,18 @@
 //você precisará utilizar uma estrutura de decisão composta,como a seguir:
 
 
-const  nota1 = 7, nota2 = 5, nota3 = 4
+const  nota1 = 7, nota2 = 5, nota3 = 4;
 const media = (nota1 + nota2 + nota3) /3;
 
 
 
 if ( media >= 7) {
-    console.log('aprovado');
+    console.log(`aprovado com nota ${media.toFixed(2)}`);
    
 } else if (media >= 5) {
-    console.log('exame');
+    console.log(`exame com nota ${media.toFixed(2)}`);
     
 } else  {
-    console.log('reprovado');
+    console.log(`reprovado com nota ${media.toFixed(2)}`);
     
 }

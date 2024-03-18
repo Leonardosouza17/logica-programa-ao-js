@@ -20,26 +20,30 @@
 
 //Organização Mundial da Saúde (OMS): https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
 
-const altura =  window.prompt('digite sua altura');
-const peso = window.prompt('digite seu peso');
-const imc = peso / (altura **2);
+const 
+      inf = window.alert('Essa calculadora que está sendo apresentada para você fazer o calculo do seu IMC,não possuí fixação de gênero ou idade,funciona para todos os casos. Mesmo descobrindo se o seu peso está ideal ou não,o médico,nutricionista e um especialista deverá ser consultado,para que esclareça tudo sobre a sua saúde em geral. '),
+      altura =  window.prompt('digite sua altura'),
+      peso = window.prompt('digite seu peso'), 
+      imc = peso / (altura **2);
+
+      
 if ( imc <= 18.5 ) {
-        window.alert('Abaixo do peso');
+        window.alert(` Abaixo do peso ${imc.toFixed(2)}`);
 
 } else if (imc <= 24.9 ){
-    window.alert('Peso normal');
+    window.alert(`Peso normal ${imc.toFixed(2)}`);
 
 } else if (imc <= 29.9) {
-    window.alert('Sobrepeso');
+    window.alert(`Sobrepeso ${imc.toFixed(2)}`);
 
 } else if (imc <= 34.9) {
-    window.alert(' Obesidade grau I');
+    window.alert(`Obesidade grau I ${imc.toFixed(2)}`);
 
 } else  if (imc <= 39.9) {
-    window.alert( 'Obesidade grau II');
+    window.alert( `Obesidade grau II ${imc.toFixed(2)}`);
 
-} else  (imc >= 40.0); {
-    window.alert('Obesidade grau III');
+} else  {
+    window.alert(`Obesidade grau III ${imc.toFixed(2)}`);
 }
 
 
