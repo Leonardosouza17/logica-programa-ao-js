@@ -7,37 +7,36 @@
 //t°C = (t°F - 32) * 5/9
 //tK = 
 
-const temperatura = window.prompt('digite a temperatura'),
-      atual = window.prompt('informe a unidade de temperatura atual para converter'),
-      conversao = window.prompt('informe para qual escala você deseja converter');
+const temperatura = parseFloat(window.prompt('digite a numeração da temperatura')),
+      atual = window.prompt('informe a unidade de temperatura atual (C, F, K)').toLowerCase(),
+      conversao = window.prompt('informe para qual escala você deseja converter (C, F, K').toLowerCase();
       
-      const 
-      CF = (temperatura * 9/5) + 32,
+const CF = (temperatura * 9/5) + 32,
       CK = temperatura + 273.15,
       FC = (temperatura - 32) * 5/9,
       FK = (temperatura + 459.67) * 5/9,
       KC = temperatura + 273.15,
       KF = temperatura * 9/5 - 459.67;
 
-      if  ( atual == "C" ||  "c" && conversao == "F" ||  "f"){ 
+      if  (( atual == "c")  && ( conversao == "f")){ 
         window.alert (`temperatura = ${CF} `); 
         }
-        else if ( atual == "C" ||  "c" && conversao == "K" || "k" ){ 
+        else if ( atual == "c" && conversao == "k" ){ 
           window.alert (`temperatura = ${CK}`);
       }
-        else if ( atual == "F" ||  "f" && conversao == "C" ||  "c"){
+        else if ( atual == "f" && conversao == "c"){
            window.alert (`temperatura = ${FC}`);
         }
-        else if ( atual == "F" ||  "f" && conversao == "K" ||  "k"){
+        else if ( atual == "f" && conversao == "k"){
           window.alert (`temperatura = ${FK}`);
         }
-        else if (atual == "K" ||  "k" && conversao == "C" ||  "c"){
+        else if (atual == "k" && conversao == "c"){
           window.alert (`temperatura = ${KC}`);
         }
-        else if ( atual == "K" ||  "k" && conversao == "F" ||  "f" ){
+        else if ( atual == "k" && conversao == "f" ){
           window.alert (`temperatura = ${KF}`);
         }
         else {
-          window.alert (` Temperatura não reconhecida`);
+          window.alert (` Temperatura não reconhecida, verifique se realmente você digitou um número`);
         }
     
