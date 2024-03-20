@@ -172,4 +172,16 @@ if ( imc <= 18.5 ) {
 }
 
 ## desafio 3:
+// Crie um conversor de temperatura entre as escalas Celsius, Fahrenheit e Kelvin. O usuário deve digitar a temperatura a ser convertida, a escala da temperatura atual e a escala para o qual o valor deve ser convertido.
 
+//Entradas (3): valor atual da temperatura, escala atual da temperatura, escala para exibição (conversão).
+
+//Fórmulas:
+//t°F = (t°C * 9/5) + 32
+//t°C = (t°F - 32) * 5/9
+//tK = 
+
+
+### Problema adicional
+
+Como executar dois programas na mesma página?
