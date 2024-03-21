@@ -28,22 +28,22 @@ const
 
       
 if ( imc <= 18.5 ) {
-        window.alert(` Abaixo do peso ${imc.toFixed(2)}`);
+        window.alert(` Abaixo do peso ${imc.toFixed(1)}`);
 
 } else if (imc <= 24.9 ){
-    window.alert(`Peso normal ${imc.toFixed(2)}`);
+    window.alert(`Peso normal ${imc.toFixed(1)}`);
 
 } else if (imc <= 29.9) {
-    window.alert(`Sobrepeso ${imc.toFixed(2)}`);
+    window.alert(`Sobrepeso ${imc.toFixed(1)}`);
 
 } else if (imc <= 34.9) {
-    window.alert(`Obesidade grau I ${imc.toFixed(2)}`);
+    window.alert(`Obesidade grau I ${imc.toFixed(1)}`);
 
 } else  if (imc <= 39.9) {
-    window.alert( `Obesidade grau II ${imc.toFixed(2)}`);
+    window.alert( `Obesidade grau II ${imc.toFixed(1)}`);
 
 } else  {
-    window.alert(`Obesidade grau III ${imc.toFixed(2)}`);
+    window.alert(`Obesidade grau III ${imc.toFixed(1)}`);
 }
 
 
