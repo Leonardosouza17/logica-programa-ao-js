@@ -7,21 +7,23 @@
 //t°C = (t°F - 32) * 5/9
 //tK = 
 
-const temperatura = parseFloat(window.prompt('digite a numeração da temperatura'));
+function converteTemperatura() {
+  
+  const temperatura = parseFloat(window.prompt('digite a numeração da temperatura'));
     
       
-const CF = (temperatura * 9/5) + 32,
+  const CF = (temperatura * 9/5) + 32,
       CK = temperatura + 273.15,
       FC = (temperatura - 32) * 5/9,
       FK = (temperatura + 459.67) * 5/9,
       KC = temperatura + 273.15,
       KF = temperatura * 9/5 - 459.67;
-
-if ( !isNaN(temperatura)){
-
- const atual = window.prompt('informe a unidade de temperatura atual (C, F, K)').toLowerCase(),
+  
+  if ( !isNaN(temperatura)){
+  
+  const atual = window.prompt('informe a unidade de temperatura atual (C, F, K)').toLowerCase(),
     conversao = window.prompt('informe para qual escala você deseja converter (C, F, K').toLowerCase();
-
+  
   if  (( atual == "c")  && ( conversao == "f")){ 
     window.alert (`temperatura = ${CF.toFixed(2)} `); 
     }
@@ -46,6 +48,8 @@ if ( !isNaN(temperatura)){
     
     }else {
       window.alert(` Verifique se realmente você digitou um número, caso seja letra não irá funcionar`)
-
-}
+  
+  }
+  }
+  
     
