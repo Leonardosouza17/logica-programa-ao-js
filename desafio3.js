@@ -8,6 +8,8 @@
 //tK = 
 
 function converteTemperatura() {
+
+  let temperatura, atual, conversao
   
   const temperatura = parseFloat(window.prompt('digite a numeração da temperatura'));
     

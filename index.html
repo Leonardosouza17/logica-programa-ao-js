@@ -13,14 +13,48 @@
 
     <h2>Calculadora IMC</h2>
 
-    <label for="peso">Peso:</label>  
+    <form action="" id="formIMC">
+
+        <label for="peso">Peso:</label>  
     <input type="number" id="peso" step="0.5" min="0" max="1000">
 
     <label for="altura">Altura:</label>
     <input type="number" id="altura" step="0.01" min="0" max="3">
 
     <button type="button" id="btCalcIMC">Calcular IMC</button>
-    <button type="button">Limpar</button>
+    <button type="reset" id="btLimpaIMC">Limpar</button>
+    
+
+    
+
+    </form>
+
+    <div id="resultadoIMC" ></div>
+
+    <h2>Conversor de temperatura</h2>
+
+    <form action="">
+
+        <label for="valorTemperatura">Temperatura:</label>
+        <input type="number" id="valorTemperatura">
+
+        <label for="escalaAtual">De:</label>
+        <select  id="escalaAtual">
+            <option value="C" selected>Celsius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+        </select>
+        
+        <label for="escalaConvertida">Para:</label>
+        <select  id="escalaConvertida">
+            <option value="C">Celsius</option>
+            <option value="F" selected>Fahrenheit</option>
+            <option value="K">Kelvin</option>
+        </select>
+
+        <button type="button">Converter</button>
+        <button type="reset">Limpar</button>
+    </form>
 
 
 
@@ -32,7 +66,14 @@
             const altura = document.querySelector('#altura').value;
             const imc = calculaIMC(peso, altura);
             console.log(imc);
-        } );
+            // (parte de dentro do HTML) -> innerHTML
+            document.querySelector('#resultadoIMC').innerHTML = imc;
+            
+            })
+
+            document.querySelector('#btLimpaIMC').addEventListener('click', function () {
+                document.querySelector('#resultadoIMC').innerHTML = '';
+            });
     </script>
 
 </body>
