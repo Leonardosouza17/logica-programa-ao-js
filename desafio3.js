@@ -8,18 +8,18 @@
 //tK = 
 
 function converteTemperatura() {
+  const temperatura = parseFloat(window.prompt('digite a numeração da temperatura')); 
 
-  let temperatura, atual, conversao
   
-  const temperatura = parseFloat(window.prompt('digite a numeração da temperatura'));
-    
-      
-  const CF = (temperatura * 9/5) + 32,
+  const CF = (temperatura * 9/5) + 32
       CK = temperatura + 273.15,
       FC = (temperatura - 32) * 5/9,
       FK = (temperatura + 459.67) * 5/9,
       KC = temperatura + 273.15,
       KF = temperatura * 9/5 - 459.67;
+
+     
+  
   
   if ( !isNaN(temperatura)){
   
@@ -52,6 +52,8 @@ function converteTemperatura() {
       window.alert(` Verifique se realmente você digitou um número, caso seja letra não irá funcionar`)
   
   }
+
+   return temperatura, atual, conversao;
   }
   
     

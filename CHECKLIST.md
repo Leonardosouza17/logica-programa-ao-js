@@ -27,3 +27,6 @@ code -r <repositorio_local>/
 ~~~
 12. Faça login no VS Code, para sincronizar suas extensões e temas
 13. Ative o salvamento automático _(Auto Save)_: Arquivo > Salvamento automático
+
+
+  
