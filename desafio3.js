@@ -7,53 +7,68 @@
 //t°C = (t°F - 32) * 5/9
 //tK = 
 
-function converteTemperatura() {
-  const temperatura = parseFloat(window.prompt('digite a numeração da temperatura')); 
+function converteTemperatura(temperatura, escalaatual, conversao) {
 
-  
-  const CF = (temperatura * 9/5) + 32
-      CK = temperatura + 273.15,
-      FC = (temperatura - 32) * 5/9,
-      FK = (temperatura + 459.67) * 5/9,
-      KC = temperatura + 273.15,
-      KF = temperatura * 9/5 - 459.67;
 
-     
-  
-  
-  if ( !isNaN(temperatura)){
-  
-  const atual = window.prompt('informe a unidade de temperatura atual (C, F, K)').toLowerCase(),
-    conversao = window.prompt('informe para qual escala você deseja converter (C, F, K').toLowerCase();
-  
-  if  (( atual == "c")  && ( conversao == "f")){ 
-    window.alert (`temperatura = ${CF.toFixed(2)} `); 
+  let msgErro = 'Ok';
+  let temperaturaConvertida
+  const
+
+    CF = (temperatura * 9 / 5) + 32,
+    CK = temperatura + 273.15,
+    FC = (temperatura - 32) * 5 / 9,
+    FK = (temperatura + 459.67) * 5 / 9,
+    KC = temperatura + 273.15,
+    KF = temperatura * 9 / 5 - 459.67;
+
+
+
+
+  if (!isNaN(temperatura)) {
+
+    escalaatual = escalaatual.toUppercase();
+    conversao = conversao.toUppercase();
+
+    if (escalaatual === "C") {
+      if (conversao === "F") {
+        temperaturaConvertida = CF;
+
+      } else if (conversao === "K") {
+        temperaturaConvertida = CK;
+
+      }
+
+      else if (escalaatual === "F") {
+        if (conversao === "C") {
+          temperaturaConvertida = FC;
+
+        } else {
+          temperaturaConvertida = FK;
+        }
+
+      } else {
+        if (conversao == "C") {
+          temperaturaConvertida = KC;
+
+        } else {
+
+          temperaturaConvertida = KF;
+
+        }
+
+      }
+
+
+
     }
-    else if ( atual == "c" && conversao == "k" ){ 
-      window.alert (`temperatura = ${CK.toFixed(2)}`);
-  }
-    else if ( atual == "f" && conversao == "c"){
-       window.alert (`temperatura = ${FC.toFixed(2)}`);
-    }
-    else if ( atual == "f" && conversao == "k"){
-      window.alert (`temperatura = ${FK.toFixed(2)}`);
-    }
-    else if (atual == "k" && conversao == "c"){
-      window.alert (`temperatura = ${KC.toFixed(2)}`);
-    }
-    else if ( atual == "k" && conversao == "f" ){
-      window.alert (`temperatura = ${KF.toFixed(2)}`);
-    }
-    else {
-      window.alert (` Temperatura não reconhecida, verifique se realmente você digitou um número`);
-    }
-    
-    }else {
-      window.alert(` Verifique se realmente você digitou um número, caso seja letra não irá funcionar`)
-  
+    // retornando em JSON - JavaScript Object Notation
+    return {
+      temperatura: temperatura,
+      escalaatual: escalaatual,
+      conversao: conversao,
+      temperaturaConvertida: temperaturaConvertida,
+      msgErro: msgErro
+    };
   }
 
-   return temperatura, atual, conversao;
-  }
-  
-    
+}
