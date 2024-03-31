@@ -76,16 +76,19 @@
             });
     
     
-        document.querySelector('#btConverteTemp').addEventListener('click', function () {
-            const temperatura = document.querySelector('#valorTemperatura').value;
-            const escalaatual = document.querySelector('#escalaAtual').value;
-            const conversao = document.querySelector('#escalaConvertida').value;
-            const temperaturaConvertida = converteTemperatura(temperatura, escalaatual, conversao);
+            document.querySelector('#btConverteTemp').addEventListener('click', function () {
+            const temperaturaAtual = document.querySelector('#valorTemperatura').value; 
+            const escalaAtual = document.querySelector('#escalaAtual').value;
+            const escalaConvertida = document.querySelector('#escalaConvertida').value;
 
-            document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${convertido.temperaturaConvertida, convertido.conversao}`;
-            
+            const conversao = converteTemperatura(temperaturaAtual, escalaAtual, escalaConvertida);
+
+            document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + conversao.escalaConversao}`;
         });
 
+        document.querySelector('#btLimpaTemp').addEventListener('click', function () {
+            document.querySelector('#resultadoTemp').innerHTML = '';
+        });
             
             
     </script>

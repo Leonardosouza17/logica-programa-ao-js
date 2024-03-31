@@ -7,68 +7,80 @@
 //t°C = (t°F - 32) * 5/9
 //tK = 
 
-function converteTemperatura(temperatura, escalaatual, conversao) {
+function converteTemperatura(temperaturaAtual, escalaAtual, escalaConversao) {
+  let temperaturaConvertida, msgErro = 'Ok';
 
+  if(!isNaN(temperaturaAtual)) {
+    escalaAtual = escalaAtual.toUpperCase();
+    escalaConversao = escalaConversao.toUppercase();
 
-  let msgErro = 'Ok';
-  let temperaturaConvertida
-  const
+    if (escalaAtual === 'C') {
 
-    CF = (temperatura * 9 / 5) + 32,
-    CK = temperatura + 273.15,
-    FC = (temperatura - 32) * 5 / 9,
-    FK = (temperatura + 459.67) * 5 / 9,
-    KC = temperatura + 273.15,
-    KF = temperatura * 9 / 5 - 459.67;
+      if (escalaConversao === 'K') {
+        temperaturaConvertida = temperaturaAtual + 273.15;
 
+      } else if (escalaConversao === 'F') {
+        temperaturaConvertida = (temperaturaAtual * 9 / 5) + 32;
 
+      } else if (escalaConversao === 'C') {
+        msgErro = `ERRO: Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`;
 
+      } else {  msgErro = `ERRO: Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`; 
 
-  if (!isNaN(temperatura)) {
+      } 
+      
+       } else if (escalaAtual === 'F') {
 
-    escalaatual = escalaatual.toUppercase();
-    conversao = conversao.toUppercase();
+          if (escalaConversao === 'K') {
+             temperaturaConvertida = (temperaturaAtual + 459.67) * 5 / 9;
+  
+          } else if (escalaConversao === 'C') {
+            temperaturaConvertida= (temperaturaAtual - 32) * 5 / 9;
+  
+          } else if (escalaConversao === 'F') {
+            msgErro = `ERRO: Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`;
+  
+          } else {
+            msgErro = `ERRO: Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`;
+  
+          }
+      } else if (escalaAtual === 'K') {
+          
+        if (escalaConversao === 'C') {
+          temperaturaConvertida = temperaturaAtual - 273.15;
 
-    if (escalaatual === "C") {
-      if (conversao === "F") {
-        temperaturaConvertida = CF;
+        } else if (escalaConversao === 'F') {
+          temperaturaConvertida = temperaturaAtual * 9 / 5 - 459.67;
 
-      } else if (conversao === "K") {
-        temperaturaConvertida = CK;
-
-      }
-
-      else if (escalaatual === "F") {
-        if (conversao === "C") {
-          temperaturaConvertida = FC;
-
+        } else if (escalaConversao === 'K') {
+          msgErro `ERRO: Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`;
+  
         } else {
-          temperaturaConvertida = FK;
+          msgErro = `ERRO: Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`;
         }
 
-      } else {
-        if (conversao == "C") {
-          temperaturaConvertida = KC;
-
         } else {
-
-          temperaturaConvertida = KF;
+          msgErro = `ERRO: Escala ATUAL selecionada: ${escalaAtual}. A escala ATUAL não existe ou não está disponível neste programa.`;
 
         }
 
-      }
+        } else {
+          msgErro = 'ERRO: O número digitado para conversão não é um número válido.';
+        }
+
+        // retornando em JSON JavaScript Object Notation
+         return {
+          temperaturaAtual: temperaturaAtual,
+        escalaAtual: escalaAtual,
+        escalaConversao: escalaConversao,
+        temperaturaConvertida: temperaturaConvertida,
+        msgErro: msgErro
+
+         }
+        }
+
+        
 
 
 
-    }
-    // retornando em JSON - JavaScript Object Notation
-    return {
-      temperatura: temperatura,
-      escalaatual: escalaatual,
-      conversao: conversao,
-      temperaturaConvertida: temperaturaConvertida,
-      msgErro: msgErro
-    };
-  }
-
-}
+ 
