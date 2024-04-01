@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Calcule o triângulo </h1>
+    <button type="button" onclick="calculatri()"> Calculadora triângulo</button>
+    
+
+    <h2>Calcular o Triângulo</h2>
+
+    <div id="resultadotriangulo"></div>
+
+    <form action="">
+
+        <label for="valortriangulo">lado A</label>
+        <input type="number" step="0" min="0" max="1000" id="A">
+
+        <label for="valortriangulo">lado B</label>
+        <input type="number" step="0" min="0" max="1000" id="B">
+        
+        <label for="valortriangulo">lado C</label>
+        <input type="number" step="0" min="0" max="1000" id="C">
+        
+        <button type="button" id="btresultadotri">Resultado da conta</button>
+        <button type="reset" id="btLimpaTri">Limpar</button>
+    </form>
+
+    <div id="resultadotriangulo"></div>
+
+    <script src="calculoTriangulo.js"></script>
+
+    <script>
+        document.querySelector('#btConverteTemp').addEventListener ('click', function () {
+            const ladoA = document.querySelector('#A').value;
+            const ladoB = document.querySelector('B').value;
+            const ladoC = document.querySelector('C').value;
+
+            const resultado = sobreoTriangulo(ladoA, ladoB, ladoC);
+
+            document.querySelector('#resultadotriangulo').innerHTML
+        })
+    </script>
+
+</body>
+</html>

@@ -79,11 +79,11 @@
             document.querySelector('#btConverteTemp').addEventListener('click', function () {
             const temperaturaAtual = document.querySelector('#valorTemperatura').value; 
             const escalaAtual = document.querySelector('#escalaAtual').value;
-            const escalaConvertida = document.querySelector('#escalaConvertida').value;
+            const escalaConverte = document.querySelector('#escalaConvertida').value;
 
-            const conversao = converteTemperatura(temperaturaAtual, escalaAtual, escalaConvertida);
+            const conversao = converteTemperatura(temperaturaAtual, escalaAtual, escalaConverte);
 
-            document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + conversao.escalaConversao}`;
+            document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + conversao.escalaConverte}`;
         });
 
         document.querySelector('#btLimpaTemp').addEventListener('click', function () {
