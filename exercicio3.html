@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="placarJogo">
+
+        <label for="timeA">PALMEIRAS</label>
+        <input type="number" id="timeA" min="0">
+        
+        <label for="timeB">FLAMENGO</label>
+        <input type="number" id="timeB" min="0">
+    
+        <button type="button">Calcular</button>
+        <button type="reset">Limpar</button>
+    
+        </form>
+    
+        <div id="resultadoJogo"></div>
+    
+        <script src="exercicio3.js"></script>
+        
+        <script>
+            const timeA = document.querySelector('#timeA').value;
+            const timeB = document.querySelector('#timeB').value;
+    
+            const placar = placar(timeA, timeB);
+    
+            document.querySelector('#resultadoJogo').innerHTML = `Placar do jogo:
+    
+    </script>
+
+    
+      
+</body>
+</html>

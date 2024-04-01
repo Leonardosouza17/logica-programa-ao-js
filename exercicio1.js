@@ -1,25 +1,19 @@
 
-function sobreoTriangulo() {
+function triangulo (ladoA, ladoB, ladoC) {
 
-    const
-        ladoA = Number(window.prompt('Valor do lado A:')),
-        ladoB = Number(window.prompt('Valor do lado B:')),
-        ladoC = Number(window.prompt('Valor do lado C:'));
+    let mensagem;
 
-    if (ladoA < (ladoB + ladoC) && ladoB < (ladoA + ladoC) && ladoC < (ladoA + ladoB)) {
+    if ((ladoA === ladoB) && (ladoB === ladoC)) {
+        mensagem = 'Como todos os lados são iguais, o triângulo é equilátero.'
 
-        if (ladoA === ladoB && ladoB === ladoC) {
-            console.log('É triângulo  Equilátero');//Os lados tem o mesmo tamanho
-
-
-        } else if ( ladoA === ladoB && ladoB === ladoC && ladoC === ladoA ){
-            console.log(' É triângulo  Isósceles');// Dois lados possuem o mesmo tamanho, e o terceiro diferente
-        } else {
-            console.log('É triângulo  Escaleno'); //Tem lados diferentes
-        }
+    } else if ((ladoA === ladoB) || (ladoB === ladoC)) {
+        mensagem = 'Se dois lados são iguais e apenas uma lado é diferente o triângulo é isóceles'
 
     } else {
-        console.log('Esta forma geométrica não é um triângulo');
+        mensagem = 'Se todos lados são diferentes, o triângulo é escaleno'
     }
-
-}
+    
+    return {
+        mensagem: mensagem
+    };
+};

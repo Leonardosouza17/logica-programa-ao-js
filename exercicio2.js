@@ -7,6 +7,31 @@
 
 //Dica: para calcular um percentual de um número, faça a operação desconto = valor * percentualDesconto /100
 
-function descontofuncionario (){
+function  calculadesconto (valorTotal, Cliente ){
+    let desconto = 0;
+    let niveldeDesconto = ""
+    
+
+    if (Cliente === 1) {
+        desconto = 0;
+        niveldeDesconto = "Cliente comum";
+
+    } else if (Cliente === 2) {
+        desconto = valorTotal * 0.1;
+        niveldeDesconto = "Funcionário";
+
+    } else if (Cliente === 3) {
+        desconto = valorTotal * 0.05;
+        niveldeDesconto = "Cliente Vip"
+
+    }else {
+        console.log ("Código do cliente é inválido.");
+
+        return;
+    }
+
+    let valorFinal = valorTotal - desconto;
+
+       
     
 }

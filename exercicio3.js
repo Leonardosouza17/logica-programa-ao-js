@@ -1,5 +1,22 @@
-//4. Busca de um nome
-//Desenvolva um programa que permita a leitura dos nomes de 10 pessoas e armazene os nomes lidos em um vetor. Após isso, o programa deve pertmitir a leitura de mais um nome qualquer para ser efetuada uma busca entre os nomes inseridos anteriormente. O programa deve exibir a mensagem ACHEI caso encontre o nome e NÃO ACHEI caso não encontre o nome.
+//3. Jogo de Futebol
+//Desenvolva um programa que receba do usuário o placar de um jogo de futebol (os gols de cada time), e informa se o resultado foi empate, vitória do primeiro time ou vitória do segundo time.
 
-//Dica: pesquise os métodos disponíveis para manipulação de arrays.
+function placar (timeA, timeB,) {
 
+    let mensagem;
+
+    if (timeA > timeB) {
+        mensagem = 'Palmeiras está ganhando '
+
+    } else if (timeB > timeA){
+        mensagem = 'Flamengo está ganhando'
+
+    } else {
+        mensagem = 'empate de placar'
+    }
+
+return {
+
+    mensagem: mensagem
+}
+}

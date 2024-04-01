@@ -7,44 +7,44 @@
 </head>
 <body>
 
-    <h1>Calcule o triângulo </h1>
-    <button type="button" onclick="calculatri()"> Calculadora triângulo</button>
+    <h1>Calcule os Triângulos</h1>
+    <h2>Coloque os lados:</h2>
+
+    <form action="" id="tipoTriangulo">
+
+    <label for="ladoA">Lado 1</label>
+    <input type="number" id="ladoA" min="1">
     
+    <label for="ladoB">Lado 2</label>
+    <input type="number" id="ladoB" min="1">
+    
+    <label for="ladoC">Lado 3</label>
+    <input type="number" id="ladoC" min="1">
 
-    <h2>Calcular o Triângulo</h2>
+    <button type="button" id="btTriangulo">Calcular</button>
+    <button type="reset"id="limparTri">Limpar</button>
 
-    <div id="resultadotriangulo"></div>
-
-    <form action="">
-
-        <label for="valortriangulo">lado A</label>
-        <input type="number" step="0" min="0" max="1000" id="A">
-
-        <label for="valortriangulo">lado B</label>
-        <input type="number" step="0" min="0" max="1000" id="B">
-        
-        <label for="valortriangulo">lado C</label>
-        <input type="number" step="0" min="0" max="1000" id="C">
-        
-        <button type="button" id="btresultadotri">Resultado da conta</button>
-        <button type="reset" id="btLimpaTri">Limpar</button>
     </form>
 
-    <div id="resultadotriangulo"></div>
+    <div id="resultadoTriangulo"></div>
 
-    <script src="calculoTriangulo.js"></script>
-
+    <script src="exercicio1.js"></script>
+    
     <script>
-        document.querySelector('#btConverteTemp').addEventListener ('click', function () {
-            const ladoA = document.querySelector('#A').value;
-            const ladoB = document.querySelector('B').value;
-            const ladoC = document.querySelector('C').value;
+    
+    document.querySelector('#btTriangulo').addEventListener('click', function() {
+            const ladoA = document.querySelector('#ladoA').value;
+            const ladoB = document.querySelector('#ladoB').value;
+            const ladoC = document.querySelector('#ladoC').value;
 
-            const resultado = sobreoTriangulo(ladoA, ladoB, ladoC);
+            const triangulo = triangulo(ladoA, ladoB, ladoC);
 
-            document.querySelector('#resultadotriangulo').innerHTML
+            document.querySelector('#resultadoTriangulo').innerHTML = `Tipo do triangulo: ${triangulo.mensagem}`;
         })
-    </script>
+
+        document.querySelector('#limparTri').addEventListener('click', function(){
+            document.querySelector('#resultadoTriangulo').innerHTML = "";
+        })</script>
 
 </body>
 </html>
