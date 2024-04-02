@@ -1,17 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    background-color:#dde6d5 ;
-    text-align: center;
-    
+    background-color:	#e5ffcc ;
+    padding: 6%;
+}
 
+section{
+    background-color: 	#d3f8b3 ;
+    padding: 5%;
+     border-radius: 10px ;
+     box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
+     
+}
+
+
+
+#btTriangulo{ 
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+    background-color:  #ce2b37;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition-duration: 0.4s; 
+    box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
+   
+}
+
+#btTriangulo:hover{
+    transform: scale(1.1);
+     
+}
+
+#limparTri{
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+    background-color:  #009246;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
+    margin-top: 5px;
+}
+
+#limparTri:hover{
+
+    transform: scale(1.1);
+}
+
+label{
+    font-family: "Raleway", sans-serif;
 }
 
 input{
-    display: flex;
-    justify-content: space-be;
+    font-family: "Raleway", sans-serif;
+    background-color: #f0f0f0;
+    font-size: large;
+    display:flex;
+    border-radius: 5px;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; 
+    
 }
+
+#tipoTriangulo{
+    justify-content: center;
+}
+    
+
 
 h1,h2,h3 {
      font-family: "Raleway", sans-serif;
+     text-align: center;
 }
