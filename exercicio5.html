@@ -27,14 +27,14 @@
 
       <script>
             document.querySelector ('#calccomb').addEventListener('click' ,function () { 
-        const litros = document.querySelector("litros")
-        const combustivel = document.querySelector("combustivel")
+        const litros = document.querySelector("litros").value;
+        const combustivel = document.querySelector("combustivel").value;
         const precoUnitario = document.querySelector("precoUnitario").value;
         const desconto = document.querySelector("desconto").value;
 
-        const precoFinal = calcularPreco(litros, combustivel, precoUnitario, desconto);
+        const finalcomb = calcularPreco(litros, combustivel, precoUnitario, desconto);
 
-        document.querySelector("#resultado").innerHTML = "Valor a ser pago pelo cliente: R$" + precoFinal;
+        document.querySelector("#resultado").innerHTML = "Valor a ser pago pelo cliente: R$" + finalcomb;
         });
 
         document.querySelector('#btLimparesult').addEventListener('click', function () {

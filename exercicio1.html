@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="exercicio1.css">
 </head>
 <body>
 
+
     <h1>Calcule os Triângulos</h1>
-    <h2>Coloque os lados:</h2>
+    <h2>Coloque os lados correspondentes :</h2>
 
     <form action="" id="tipoTriangulo">
 
@@ -32,14 +35,14 @@
     
     <script>
     
-    document.querySelector('#btTriangulo').addEventListener('click', function() {
+    document.querySelector('#btTriangulo').addEventListener('click',() =>  { //arrow function =>
             const ladoA = document.querySelector('#ladoA').value;
             const ladoB = document.querySelector('#ladoB').value;
             const ladoC = document.querySelector('#ladoC').value;
 
-            const triangulo = triangulo(ladoA, ladoB, ladoC);
+            const triangulos = triangulo(ladoA, ladoB, ladoC);
 
-            document.querySelector('#resultadoTriangulo').innerHTML = `Tipo do triangulo: ${triangulo.mensagem}`;
+            document.querySelector('#resultadoTriangulo').innerHTML = `Classificação do Triângulo: ${triangulos.mensagem}`;
         })
 
         document.querySelector('#limparTri').addEventListener('click', function(){

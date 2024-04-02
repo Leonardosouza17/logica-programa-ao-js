@@ -14,8 +14,8 @@
         <label for="timeB">FLAMENGO</label>
         <input type="number" id="timeB" min="0">
     
-        <button type="button">Calcular</button>
-        <button type="reset">Limpar</button>
+        <button type="button" id="btfutebol">Calcular</button>
+        <button type="reset" id="btlimpa">Limpar</button>
     
         </form>
     
@@ -24,13 +24,24 @@
         <script src="exercicio3.js"></script>
         
         <script>
-            const timeA = document.querySelector('#timeA').value;
+            document.querySelector('#btfutebol').addEventListener('click', function() {
+                const timeA = document.querySelector('#timeA').value;
             const timeB = document.querySelector('#timeB').value;
+            const gol1 = document.querySelector('#timeA').value;
+            const gol2 = document.querySelector('#timeB').value;
     
-            const placar = placar(timeA, timeB);
+            const placardoJogo = placar (timeA, timeB, gol1, gol2);
     
-            document.querySelector('#resultadoJogo').innerHTML = `Placar do jogo:
-    
+            document.querySelector('#resultadoJogo').innerHTML = `Placar do jogo: ${placardoJogo.mensagem}`;
+
+        
+            });
+             
+
+            document.querySelector('#btlimpa').addEventListener('click', function () {
+            document.querySelector('#resultadodoJogo').innerHTML = '';
+            });
+            
     </script>
 
     

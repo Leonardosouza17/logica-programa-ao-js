@@ -17,11 +17,11 @@ function  calculadesconto (valorTotal, Cliente ){
         niveldeDesconto = "Cliente comum";
 
     } else if (Cliente === 2) {
-        desconto = valorTotal * 0.1;
+        desconto = valorTotal * 10/100; //10%
         niveldeDesconto = "Funcionário";
 
     } else if (Cliente === 3) {
-        desconto = valorTotal * 0.05;
+        desconto = valorTotal * 5/100; //5%
         niveldeDesconto = "Cliente Vip"
 
     }else {
