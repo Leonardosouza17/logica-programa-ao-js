@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+:root {/*html*/
+    --fonte-geral: "Raleway", sans-serif;
+}
 body {
     background-color:	#e5ffcc ;
     padding: 6%;
+    font-family: var(--fonte-geral)
 }
 
 section{
@@ -44,6 +49,7 @@ section{
     transition-duration: 0.4s;
     box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
     margin-top: 5px;
+
 }
 
 #limparTri:hover{
@@ -75,4 +81,19 @@ input{
 h1,h2,h3 {
      font-family: "Raleway", sans-serif;
      text-align: center;
+}
+
+.elementos-em-linha{
+    display: flex;
+    justify-content: center;
+
+}
+
+button{
+    display: flex;
+    align-items: center;
+}
+
+#resultadoTriangulo{
+    
 }

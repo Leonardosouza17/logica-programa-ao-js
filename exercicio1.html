@@ -13,8 +13,9 @@
     <h1>Calcule os Triângulos</h1>
     <h2>Coloque os valores aos lados correspondentes :</h2>
 
+    
     <form action="" id="tipoTriangulo">
-
+     <div class="elementos-em-linha">
     <label for="ladoA">Lado 1</label>
     <input type="number" id="ladoA" min="1">
     
@@ -23,6 +24,7 @@
     
     <label for="ladoC">Lado 3</label>
     <input type="number" id="ladoC" min="1">
+     </div>
 
     <button type="button" id="btTriangulo">Calcular</button>
     <button type="reset"id="limparTri">Limpar</button>
@@ -30,7 +32,9 @@
     </form>
 </section>
 
-    <div id="resultadoTriangulo"></div>
+    <div id="resultadoTriangulo">
+        <input type="text" id="resultadoTriangulo" min="1">
+    </div>
 
     <script src="exercicio1.js"></script>
     
