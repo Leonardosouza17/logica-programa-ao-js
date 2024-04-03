@@ -3,16 +3,18 @@
 
 :root {/*html*/
     --fonte-geral: "Raleway", sans-serif;
+    font-weight: 500;
 }
 body {
     background-color:	#e5ffcc ;
     padding: 6%;
     font-family: var(--fonte-geral)
+    
 }
 
 section{
     background-color: 	#d3f8b3 ;
-    padding: 5%;
+    padding: 8%;
      border-radius: 10px ;
      box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
      
@@ -30,6 +32,7 @@ section{
     cursor: pointer; 
     transition-duration: 0.4s; 
     box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
+    display: flex;
    
 }
 
@@ -49,6 +52,7 @@ section{
     transition-duration: 0.4s;
     box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
     margin-top: 5px;
+    display: flex;
 
 }
 
@@ -70,6 +74,8 @@ input{
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     align-items: center; 
     
+    
+    
 }
 
 #tipoTriangulo{
@@ -89,10 +95,7 @@ h1,h2,h3 {
 
 }
 
-button{
-    display: flex;
-    align-items: center;
-}
+
 
 #resultadoTriangulo{
     
