@@ -8,17 +8,24 @@
 body {
     background-color:	#e5ffcc ;
     padding: 6%;
-    font-family: var(--fonte-geral)
+    font-family: var(--fonte-geral);
+    display:flex;
+    justify-content: center;
+
     
 }
 
 section{
     background-color: 	#d3f8b3 ;
     padding: 8%;
-     border-radius: 10px ;
-     box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
+    border-radius: 10px ;
+     box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);
+     width: 400px;
+     
      
 }
+
+
 
 
 
@@ -31,8 +38,9 @@ section{
     border-radius: 5px;
     cursor: pointer; 
     transition-duration: 0.4s; 
-    box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
-    display: flex;
+    box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin-right: 10%;
+    
    
 }
 
@@ -51,8 +59,8 @@ section{
     cursor: pointer;
     transition-duration: 0.4s;
     box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
-    margin-top: 5px;
-    display: flex;
+    
+    
 
 }
 
@@ -69,10 +77,12 @@ input{
     font-family: "Raleway", sans-serif;
     background-color: #f0f0f0;
     font-size: large;
-    display:flex;
+    
     border-radius: 5px;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     align-items: center; 
+    width: 100px;
+    margin: 15px;
     
     
     
@@ -87,6 +97,7 @@ input{
 h1,h2,h3 {
      font-family: "Raleway", sans-serif;
      text-align: center;
+     font-size: medium;
 }
 
 .elementos-em-linha{
@@ -95,8 +106,14 @@ h1,h2,h3 {
 
 }
 
-
+#botoes{
+    display:flex;
+    justify-content: center;
+    
+    
+}
 
 #resultadoTriangulo{
+    padding-bottom: 3%;
     
 }
