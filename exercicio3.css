@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {/*html*/
+    --fonte-geral: "Raleway", sans-serif;
+    font-weight: 500;
+}
+body {
+    background-color:	#e5ffcc ;
+    padding: 6%;
+    font-family: var(--fonte-geral);
+    display:flex;
+    justify-content: center;
+
+    
+}
+
+section{
+    background-color: 	#d3f8b3 ;
+    padding: 8%;
+    border-radius: 10px ;
+     box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);
+     width: 400px;
+     
+     
+}
+
+
+#btfutebol{ 
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+    background-color:  #ce2b37;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition-duration: 0.4s; 
+    box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin-right: 10%;
+    
+   
+}
+
+#btfutebol:hover{
+    transform: scale(1.1);
+     
+}
+
+#btlimpa{
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+    background-color:  #009246;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
+    
+    
+
+}
+
+#btlimpa:hover{
+
+    transform: scale(1.1);
+}
+
+label{
+    font-family: "Raleway", sans-serif;
+}
+
+input{
+    font-family: "Raleway", sans-serif;
+    background-color: #f0f0f0;
+    font-size: large;
+    
+    border-radius: 5px;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; 
+    width: 100px;
+    margin: 15px;
+    
+}
+
+#placarJogo {
+    justify-content: center;
+}
+    
+
+
+h1,h2,h3 {
+     font-family: "Raleway", sans-serif;
+     text-align: center;
+     font-size: medium;
+}
+
+.elementos-em-linha{
+    display: flex;
+    justify-content: center;
+
+}
+
+#botoes{
+    display:flex;
+    justify-content: center;
+    
+    
+}
+
+#resultadoJogo{
+    padding-bottom: 3%;
+    
+}
