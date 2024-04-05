@@ -27,18 +27,13 @@
     <script src="exercicio2.js"></script>
 
     <script>
-    document.querySelector('#btdescont').addEventListener('click', function() {
-        const Cliente = document.querySelector('#Descon').value;
-        
-
-        const
-
-        document.querySelector('#resultadodesconto').innerHTML = `Tipo do triangulo: ${triangulos.mensagem}`;
+    document.querySelector("#btdescont").addEventListener('click', function (event) {
+        event.preventDefault();
+        escolha = document.getElementById('comum').value;
+        saida = desconto(escolha);
+        document.getElementById('saida').innerHTML = `valor à ser pago: ${saida}`
     })
-
-    document.querySelector('#limparTri').addEventListener('click', function(){
-        document.querySelector('#resultadoTriangulo').innerHTML = "";
-    })</script>
+    </script>
 
 </body>
 </html>

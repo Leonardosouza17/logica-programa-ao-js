@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="exercicio3.css">
 </head>
+
 <body>
-    
-    <section> 
-    <form action="" id="placarJogo">
-        <div class="elementos-em-linha">
-        <label for="timeA">PALMEIRAS</label>
-        <input type="number" id="timeA" min="0">
-        
-        <label for="timeB">FLAMENGO</label>
-        <input type="number" id="timeB" min="0">
-    </div>
-    
-        <div id="botoes">
-        <button type="button" id="btfutebol">Calcular</button>
-        <button type="reset" id="btlimpa">Limpar</button>
-    </div>
+
+    <section>
+        <form action="" id="placarJogo">
+            <div class="elementos-em-linha">
+                <label for="timeA">PALMEIRAS</label>
+                <input type="number" id="timeA" min="0">
+
+                <label for="timeB">FLAMENGO</label>
+                <input type="number" id="timeB" min="0">
+            </div>
+            
+            <div id="resultadoJogo"></div>
+
+            <div id="botoes">
+                <button type="button" id="btfutebol">Calcular</button>
+                <button type="reset" id="btlimpa">Limpar</button>
+            </div>
         </form>
+
     </section>
-    
-        <div id="resultadoJogo"></div>
-    
-        <script src="exercicio3.js"></script>
-        
-        <script>
-            document.querySelector('#btfutebol').addEventListener('click', function() {
-                const timeA = document.querySelector('#timeA').value;
+
+    <script src="exercicio3.js"></script>
+
+    <script>
+        document.querySelector('#btfutebol').addEventListener('click', function () {
+            const timeA = document.querySelector('#timeA').value;
             const timeB = document.querySelector('#timeB').value;
             const gol1 = document.querySelector('#timeA').value;
             const gol2 = document.querySelector('#timeB').value;
-    
-            const placardoJogo = placar (timeA, timeB, gol1, gol2);
-    
+
+            const placardoJogo = placar(timeA, timeB, gol1, gol2);
+
             document.querySelector('#resultadoJogo').innerHTML = `Placar do jogo: ${placardoJogo.mensagem}`;
 
-        
-            });
-             
 
-            document.querySelector('#btlimpa').addEventListener('click', function () {
+        });
+
+
+        document.querySelector('#btlimpa').addEventListener('click', function () {
             document.querySelector('#resultadodoJogo').innerHTML = '';
-            });
-            
+        });
+
     </script>
 
-    
-      
+
+
 </body>
+
 </html>
