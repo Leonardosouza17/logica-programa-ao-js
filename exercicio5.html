@@ -1,46 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calcular Combustível</title>
+    <link rel="stylesheet" href="exercicio5.css">
 </head>
 <body>
-      <h2>Calcular Preço De Combustível</h2>
-      <form action="">
-        <label for="litros">Litros Vendidos:</label>
-        <input type="number" id="litros" name="litros" step="0.01" required>
 
-        <label for="combustivel"> Tipo de Combustível:</label>
-        <select name="combustivel" id="combustivel" required>
-            <option value="Alcool"></option>
-            <option value="Gasolina"></option>
-        </select>
+    <section>
+    <h2>Calculador De Combustível</h2>
+    
+    <div class="elementos-em-linha">
 
-        <button type="button" id="calccomb"  onclick="calcularPreco()"> Calcular Preço</button>
-        <button type="reset" id="btLimparesult">Limpar</button>
-      </form>
+    <label for="litros">Litros De Combustível:</label>
+    <input type="number" id="litros" name="litros" min="1">
 
-      <div id="resultado"></div>
+    <label for="combustivel">Tipo De Combustível</label>
+    <select name="combustivel" id="combustivel">
+        <option value="alcool">Álcool</option>
+        <option value="gasolina">Gasolina</option>
+    </select>
 
-       <script src="exercicio5.js"></script>
+    </div>
 
-      <script>
-            document.querySelector ('#calccomb').addEventListener('click' ,function () { 
-        const litros = document.querySelector("litros").value;
-        const combustivel = document.querySelector("combustivel").value;
-        const precoUnitario = document.querySelector("precoUnitario").value;
-        const desconto = document.querySelector("desconto").value;
+    <div id="resultado"></div>
 
-        const finalcomb = calcularPreco(litros, combustivel, precoUnitario, desconto);
+    <div id="botoes">
+    <button type="button" onclick="calculacomb()" id="calccomb">Calcular</button>
+    <button type="reset" id="limparesultado">Limpar</button>
+    </div>
+    </section>
 
-        document.querySelector("#resultado").innerHTML = "Valor a ser pago pelo cliente: R$" + finalcomb;
-        });
+    
 
-        document.querySelector('#btLimparesult').addEventListener('click', function () {
-            document.querySelector('#resultado').innerHTML = '';
-        });
-      </script>
-       
+    <script>
+
+        function calculacomb () {
+
+            let litros = document.getElementById('litros').value;
+            let combustivel = document.getElementById('combustivel').value;
+            let preco;
+            let desconto;
+
+            if (combustivel ==='alcool') {
+
+                if (litros = 20) {
+                    desconto = 0.03;
+
+                } else {
+                    desconto = 0.05;
+                }
+                preco = 2.89;
+
+            }else if (combustivel === 'gasolina') {
+
+                if (litros = 20) {
+                    desconto = 0.04;
+
+                } else {
+                    desconto = 0.06;
+                }
+                preco = 5.19;
+
+            } else {
+
+                document.getElementById('resultado').innerText = " Tipo de combustível inválido";
+
+              return;
+            }
+
+            let  valordeDesconto = preco * litros * (1 - desconto);
+
+            document.getElementById('resultado').innerText = "Valor a ser pago : R$" + valordeDesconto.toFixed(2);
+            document.getElementById('limparesultado').addEventListener('click', () =>  {
+               
+                document.getElementById('resultado').innerText = '';
+
+            });
+        }
+
+    </script>
+   
+
 </body>
 </html>
