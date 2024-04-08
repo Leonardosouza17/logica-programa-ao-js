@@ -10,14 +10,20 @@
     <h2>Digite o Desconto:</h2>
 
     <form action="" id="tipodesconto">
-        <label for="Descon">cliente </label>
-        <input type="numer" id="freguês">
+        <label for="tipoCliente">cliente </label>
+        <select  id="tipoCliente">
+            <option value="comum"> Comum</option>
+            <option value="funcionario"> Funcionário</option>
+            <option value="vip"> Vip</option>
+        </select>
 
-        <label for="porcentagem"> Porcentagem de diminuição de valor</label>
-        <select name="" id=""></select>
+        <!-- <label for="porcentagem"> Porcentagem de diminuição de valor</label>
+        <select name="" id=""></select> -->
 
         <button type="button" id="btdescont">Calcular</button>
         <button type="reset"id="limpardescont">Limpar</button>
+
+        <p id="saida"></p>
 
 
 
@@ -29,9 +35,9 @@
     <script>
     document.querySelector("#btdescont").addEventListener('click', function (event) {
         event.preventDefault();
-        escolha = document.getElementById('comum').value;
-        saida = desconto(escolha);
-        document.getElementById('saida').innerHTML = `valor à ser pago: ${saida}`
+        escolha = document.getElementById('tipoCliente').value;
+        calculo = descontos(escolha);
+        document.getElementById('resultadodesconto').innerHTML = `${calculo}`
     })
     </script>
 

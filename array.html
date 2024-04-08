@@ -10,7 +10,7 @@
     <form action="">
 
         <label for="nomeInclusao"> Nome para incluir:</label>
-        <input type="text" id="nomeInclusao">
+        <input type="text" id="nomeInclusao" required autofocus>
 
         <button type="reset" id="btCadastrar"> Cadastrar</button>
 
@@ -27,8 +27,21 @@
 
         document.querySelector('#btCadastrar').addEventListener('click', () => {
 
+            if (nomes.length < 10) {
 
-            nomes.push(document.querySelector('#nomeInclusao').value);
+                nomes.push(document.querySelector('#nomeInclusao').value);
+
+            }else {
+                
+                if (nomes.includes (document.querySelector('#nomeInclusao').value)) {
+                    console.log('ACHEI');
+
+                } else {
+                    console.log('NÃO ACHEI');
+                }
+            }
+
+
 
             
 
@@ -36,15 +49,14 @@
 
         document.querySelector('#btMostrar').addEventListener('click', () => {
 
-            for (let i = 0; i < nomes.length; i++) {
+            nomes.forEach((nome) => {
+                document.querySelector('#resultado').innerHTML += nome + '<br>';
+            })
 
-                document.querySelector('#resultado').innerHTML += nomes[i]  + '<br>';
-            }
         });
 
         // TODO: 
-        // 1. Ao clicar no botão cadastrar, limpar o input
-        // 2. Limitar à 10 nomes
+       
         // 3. Após o 10° nome, o campo permite buscar un nome no array
         // 4. Exibir se o nome foi encontrado
 
