@@ -19,3 +19,5 @@ function triangulo (ladoA, ladoB, ladoC) {
     };
     // ?? => operador de coalescência
 };
+
+

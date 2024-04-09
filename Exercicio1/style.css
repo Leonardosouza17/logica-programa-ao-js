@@ -4,11 +4,13 @@
 :root {/*html*/
     --fonte-geral: "Raleway", sans-serif;
     font-weight: 500;
+    scroll-behavior: smooth;
 }
 
 
 body {
-    background-color: #dfe3ee;           /*#e5ffcc*/ 
+    background-color:var(--plano-fundo);
+    ;           /*#e5ffcc*/ 
     padding: 6%;
     font-family: var(--fonte-geral);
     display:flex;
@@ -18,7 +20,8 @@ body {
 }
 
 section{
-    background-color:#8b9dc3;                 /*#d3f8b3 */
+    
+    
     padding: 8%;
     border-radius: 10px ;
      box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -79,7 +82,6 @@ input{
     font-family: "Raleway", sans-serif;
     background-color: #f0f0f0;
     font-size: large;
-    
     border-radius: 5px;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     align-items: center; 
@@ -92,19 +94,14 @@ input{
 
 
 #btTrocaTema{
-        color: white;
+        
         padding: 20px 20px;
-        background-color:var(--cor-fundo-ancora);
-        background-color: var(--cor-fundo-ancora#1ddb82);
+        background-color: var(--cor-fundo-ancora  #1e90ff);
         text-decoration: none;
         border: none;
         border-radius: 50px;
         transition: transform 0.3s ease;
         justify-content: left;
-        background-image: url(), url();
-        background-size: 20px 20px, 20px 20px; /* Tamanho dos ícones */
-        background-repeat: no-repeat, no-repeat; /* Evita que os ícones sejam repetidos */
-        background-position: 10px center, calc(100% - 30px) center; /* Posicionamento dos ícones (horizontalmente) */
         padding-left: 40px;
         cursor: pointer;
         display: flex;
@@ -148,4 +145,32 @@ h1,h2,h3 {
 #resultadoTriangulo{
     padding-bottom: 3%;
     
+}
+
+[data-tema="dark"] {
+    --plano-fundo: black;
+    ---cor-primaria-texto:black;
+    --cor-fundo-tags:black;
+    --cor-paragrafo:white;
+    --cor-titulo-h1:#1e90ff;
+    --cor-fundo-ancora: #1e90ff;
+    --cor-barra-da-pagina:#1e90ff;
+    --cor-fundo-bdp:black;
+    --header-cor-fundo:rgba(0, 0, 0,0.5);
+    --cor-paragrafo-card: white;
+    
+
+}
+
+[data-tema="light"] {
+    --plano-fundo: #d3ffce;
+    ---cor-primaria-texto: #e5e6eb;
+    --cor-fundo-tags: #d3ffc;
+    --cor-paragrafo:black;
+    --cor-titulo:#559e83;
+    --cor-fundo-ancora:#1ddb82;
+    --cor-barra-da-pagina:#00d27f;
+    --cor-fundo-bdp:#d3ffce;
+    --header-cor-fundo:rgba(238,238,238, 0);
+    --cor-paragrafo-card: rgba(0,0,0,0.5);
 }
