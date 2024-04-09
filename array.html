@@ -4,17 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        label[for="nome"] {
+            color:green
+        }
+        
+        .oculto{
+            display: none;
+            
+        }
+
+    </style>
 </head>
 <body>
 
     <form action="">
 
-        <label for="nomeInclusao"> Nome para incluir:</label>
-        <input type="text" id="nomeInclusao" required autofocus>
+        <label for="nome"> Nome para incluir:</label>
+        <input type="text" id="nome" required autofocus>
 
-        <button type="reset" id="btCadastrar"> Cadastrar</button>
+        <button type="reset" id="btCadastrar">Cadastrar</button>
 
-        <button type="button" id="btMostrar"> Mostrar</button>
+        <button type="button" id="btPesquisar" class="oculto">Pesquisar</button>
+
+        
 
     </form>
 
@@ -22,23 +35,41 @@
     
     <script>
 
+         let nomes = []; // array vazio chamado "nomes"
         
-        let nomes = []; // array vazio chamado "nomes"
+        document.addEventListener('keydown', (evento) => {
+
+            if (evento.key === 'Enter') {
+
+                evento.preventDefault();
+
+                if (nomes.length < 10 ) {
+                
+                    document.querySelector('#btCadastrar').click();
+
+                } else {
+
+                    document.querySelector('#btPesquisar').click();
+                }
+            }
+        });
+        
 
         document.querySelector('#btCadastrar').addEventListener('click', () => {
 
-            if (nomes.length < 10) {
+            nomes.push(document.querySelector('#nome').value);
 
-                nomes.push(document.querySelector('#nomeInclusao').value);
+            // Ao atingir 10 nomes
+            if (nomes.length === 10) {
 
-            }else {
-                
-                if (nomes.includes (document.querySelector('#nomeInclusao').value)) {
-                    console.log('ACHEI');
+                //troque a label do input "nome"
+                document.querySelector('label[for="nome"]').innerHTML = 'Nome para pesquisar';
 
-                } else {
-                    console.log('NÃO ACHEI');
-                }
+                // oculte o botão cadastrar
+                document.querySelector('#btCadastrar').classList.add('oculto');
+
+                // desoculte o botão pesquisar
+                document.querySelector('#btPesquisar').classList.remove('oculto');
             }
 
 
@@ -47,11 +78,18 @@
 
         });
 
-        document.querySelector('#btMostrar').addEventListener('click', () => {
+        document.querySelector('#btPesquisar').addEventListener('click', () => {
 
-            nomes.forEach((nome) => {
-                document.querySelector('#resultado').innerHTML += nome + '<br>';
-            })
+            const nomeBuscado = document.querySelector('#nome').value;
+
+            if (nomes.includes(nomeBuscado)) {
+
+                document.querySelector('#resultado').innerHTML = `ACHEI na posição ${nomes.indexOf(nomeBuscado)}, ${nomes[nomes.indexOf(nomeBuscado)]}`;
+
+            } else {
+
+                document.querySelector('#resultado').innerHTML = 'NÃO ACHEI';
+            }
 
         });
 

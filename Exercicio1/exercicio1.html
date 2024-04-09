@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="exercicio1.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
+   
     
     <section>
         
@@ -52,7 +53,29 @@
 
         document.querySelector('#limparTri').addEventListener('click', function(){
             document.querySelector('#resultadoTriangulo').innerHTML = "";
-        })</script>
+        })
+        
+        
+        document.querySelector('#btTrocaTema').addEventListener('click', 
+    function trocaTema() {
+    // pegar o elemento com o tema
+    // se o tema for light, então mude o atributo para dark
+    // se não for, então mude o atributo para light
+    if (document.documentElement.getAttribute('data-tema') === 
+    'light') {
+        document.documentElement.setAttribute('data-tema', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-tema', 'light');
+    }
+});
+        
+        
+        </script>
+
+    <button type="button" id="btTrocaTema"></button>
+
+    <script src="tema.js"></script>
+
 
 </body>
 </html>

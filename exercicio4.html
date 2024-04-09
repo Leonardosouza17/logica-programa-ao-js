@@ -4,17 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        label[for="nome"] {
+            color:green
+        }
+        
+        .oculto{
+            display: none;
+            
+        }
+
+    </style>
 </head>
 <body>
 
     <form action="">
 
-        <label for="nomeInclusao"> Nome para incluir:</label>
-        <input type="text" id="nomeInclusao">
+        <label for="nome"> Nome para incluir:</label>
+        <input type="text" id="nome" required autofocus>
 
-        <button type="reset" id="btCadastrar"> Cadastrar</button>
+        <button type="reset" id="btCadastrar">Cadastrar</button>
 
-        <button type="button" id="btMostrar"> Mostrar</button>
+        <button type="button" id="btPesquisar" class="oculto">Pesquisar</button>
+
+        
 
     </form>
 
@@ -22,29 +36,66 @@
     
     <script>
 
+         let nomes = []; // array vazio chamado "nomes"
         
-        let nomes = []; // array vazio chamado "nomes"
+        document.addEventListener('keydown', (evento) => {
+
+            if (evento.key === 'Enter') {
+
+                evento.preventDefault();
+
+                if (nomes.length < 10 ) {
+                
+                    document.querySelector('#btCadastrar').click();
+
+                } else {
+
+                    document.querySelector('#btPesquisar').click();
+                }
+            }
+        });
+        
 
         document.querySelector('#btCadastrar').addEventListener('click', () => {
 
+            nomes.push(document.querySelector('#nome').value);
 
-            nomes.push(document.querySelector('#nomeInclusao').value);
+            // Ao atingir 10 nomes
+            if (nomes.length === 10) {
+
+                //troque a label do input "nome"
+                document.querySelector('label[for="nome"]').innerHTML = 'Nome para pesquisar';
+
+                // oculte o botão cadastrar
+                document.querySelector('#btCadastrar').classList.add('oculto');
+
+                // desoculte o botão pesquisar
+                document.querySelector('#btPesquisar').classList.remove('oculto');
+            }
+
+
 
             
 
         });
 
-        document.querySelector('#btMostrar').addEventListener('click', () => {
+        document.querySelector('#btPesquisar').addEventListener('click', () => {
 
-            for (let i = 0; i < nomes.length; i++) {
+            const nomeBuscado = document.querySelector('#nome').value;
 
-                document.querySelector('#resultado').innerHTML += nomes[i]  + '<br>';
+            if (nomes.includes(nomeBuscado)) {
+
+                document.querySelector('#resultado').innerHTML = `ACHEI na posição ${nomes.indexOf(nomeBuscado)}, ${nomes[nomes.indexOf(nomeBuscado)]}`;
+
+            } else {
+
+                document.querySelector('#resultado').innerHTML = 'NÃO ACHEI';
             }
+
         });
 
         // TODO: 
-        // 1. Ao clicar no botão cadastrar, limpar o input
-        // 2. Limitar à 10 nomes
+       
         // 3. Após o 10° nome, o campo permite buscar un nome no array
         // 4. Exibir se o nome foi encontrado
 
