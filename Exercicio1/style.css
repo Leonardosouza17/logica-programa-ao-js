@@ -34,7 +34,7 @@ section{
 
  
 
-#btTriangulo, #btCadastrar { 
+#btTriangulo, #btCadastrar, #btdescont{ 
     font-family: "Raleway", sans-serif;
     font-size: medium;
     background-color:  #ce2b37;
@@ -111,6 +111,7 @@ input{
         bottom: 2rem;
         left: 2.5rem;
         box-shadow: var(--cor-box-shadow);
+       
 
 }
 
@@ -123,6 +124,7 @@ input{
 #btTrocaTema img{
     height: 20px;
     justify-content: center;
+    
 }
 
 #tipoTriangulo{
@@ -158,11 +160,11 @@ h1,h2,h3 {
 
 [data-tema="dark"] {
     --plano-fundo: #232b2b;
-    ---cor-primaria-texto:black;
+    ---cor-primaria-texto:#cacfd5;
     --cor-fundo-tags:black;
     --cor-box-shadow: #727f90;
     --cor-titulo:#cacfd5;
-    --cor-fundo-ancora: #1e90ff;
+    --cor-fundo-ancora:	#7f7f7f;
     --cor-barra-da-pagina:#1e90ff;
     --cor-fundo-bdp:black;
     --header-cor-fundo:rgba(0, 0, 0,0.5);
@@ -181,4 +183,5 @@ h1,h2,h3 {
     --cor-box-shadow: rgba(0, 0, 0, 0.5);
     --header-cor-fundo:rgba(238,238,238, 0);
     --cor-fundo-section:	#66b2b2;
+    
 }
