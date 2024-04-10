@@ -20,11 +20,11 @@ body {
 }
 
 section{
-    
+    background-color: var(--cor-fundo-section);
     
     padding: 8%;
     border-radius: 10px ;
-     box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);
+     box-shadow:    2px 2px 5px var(--cor-box-shadow);
      width: 400px;
      
      
@@ -43,7 +43,7 @@ section{
     border-radius: 5px;
     cursor: pointer; 
     transition-duration: 0.4s; 
-    box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow:    2px 2px 5px var(--cor-box-shadow);
     margin-right: 10%;
     
    
@@ -63,7 +63,7 @@ section{
     border-radius: 5px;
     cursor: pointer;
     transition-duration: 0.4s;
-    box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
+    box-shadow: 2px 2px 5px var( --cor-box-shadow);
     
     
 
@@ -87,6 +87,8 @@ input{
     align-items: center; 
     width: 100px;
     margin: 15px;
+    padding-left:8px;
+    border: none;
     
     
     
@@ -95,22 +97,28 @@ input{
 
 #btTrocaTema{
         
-        padding: 20px 20px;
-        background-color: var(--cor-fundo-ancora  #1e90ff);
+        padding: 10px 10px 10px 10px;
+        background-color: var(--cor-fundo-ancora);
+        color: var(---cor-primaria-texto);
         text-decoration: none;
         border: none;
         border-radius: 50px;
         transition: transform 0.3s ease;
         justify-content: left;
-        padding-left: 40px;
         cursor: pointer;
         display: flex;
         position: fixed;
         bottom: 2rem;
         left: 2.5rem;
+        box-shadow: var(--cor-box-shadow);
+
 }
 
 #btTrocaTema:hover{ transform: scale(1.1);}
+
+#btTrocaTema:active{
+     box-shadow: inset 1px 1px 1px var();
+}
 
 #btTrocaTema img{
     height: 20px;
@@ -127,6 +135,7 @@ h1,h2,h3 {
      font-family: "Raleway", sans-serif;
      text-align: center;
      font-size: medium;
+     color: var( --cor-titulo);
 }
 
 .elementos-em-linha{
@@ -148,29 +157,28 @@ h1,h2,h3 {
 }
 
 [data-tema="dark"] {
-    --plano-fundo: black;
+    --plano-fundo: #232b2b;
     ---cor-primaria-texto:black;
     --cor-fundo-tags:black;
-    --cor-paragrafo:white;
-    --cor-titulo-h1:#1e90ff;
+    --cor-box-shadow: #727f90;
+    --cor-titulo:#cacfd5;
     --cor-fundo-ancora: #1e90ff;
     --cor-barra-da-pagina:#1e90ff;
     --cor-fundo-bdp:black;
     --header-cor-fundo:rgba(0, 0, 0,0.5);
-    --cor-paragrafo-card: white;
+    --cor-fundo-section: #3b444b;
     
 
 }
 
 [data-tema="light"] {
-    --plano-fundo: #d3ffce;
+    --plano-fundo: #b2d8d8;
     ---cor-primaria-texto: #e5e6eb;
     --cor-fundo-tags: #d3ffc;
-    --cor-paragrafo:black;
-    --cor-titulo:#559e83;
-    --cor-fundo-ancora:#1ddb82;
+    --cor-titulo:#004c4c;
+    --cor-fundo-ancora:	#008080;
     --cor-barra-da-pagina:#00d27f;
-    --cor-fundo-bdp:#d3ffce;
+    --cor-box-shadow: rgba(0, 0, 0, 0.5);
     --header-cor-fundo:rgba(238,238,238, 0);
-    --cor-paragrafo-card: rgba(0,0,0,0.5);
+    --cor-fundo-section:	#66b2b2;
 }
