@@ -1,100 +1,198 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-:root {/*html*/
+:root {
+    /*html*/
     --fonte-geral: "Raleway", sans-serif;
     font-weight: 500;
+    scroll-behavior: smooth;
 }
+
+
 body {
-    background-color:	#e5ffcc ;
+    background-color: var(--plano-fundo);
+    ;
+    /*#e5ffcc*/
     padding: 6%;
-    font-family: var(--fonte-geral)
-    
-}
-
-section{
-    background-color: 	#d3f8b3 ;
-    padding: 8%;
-     border-radius: 10px ;
-     box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);
-     
-}
-
-
-#btTriangulo{ 
-    font-family: "Raleway", sans-serif;
-    font-size: medium;
-    background-color:  #ce2b37;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer; 
-    transition-duration: 0.4s; 
-    box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
+    font-family: var(--fonte-geral);
     display: flex;
-   
+    justify-content: center;
+
+
 }
 
-#btTriangulo:hover{
-    transform: scale(1.1);
-     
+section {
+    background-color: var(--cor-fundo-section);
+    padding: 8%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px var(--cor-box-shadow);
+    width: 400px;
+
+
 }
 
-#limparTri{
+
+#btTriangulo,
+#btCadastrar,
+#btPesquisar {
     font-family: "Raleway", sans-serif;
     font-size: medium;
-    background-color:  #009246;
+    background-color: #ce2b37;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition-duration: 0.4s;
-    box-shadow:   5px 5px 10px rgba(0, 0, 0, 0.5);;
-    margin-top: 5px;
-    display: flex;
+    box-shadow: 2px 2px 5px var(--cor-box-shadow);
+    margin-right: 10%;
+
 
 }
 
-#limparTri:hover{
+
+#btTriangulo:hover,
+#btCadastrar:hover,
+#btPesquisar:hover {
+    transform: scale(1.1);
+
+}
+
+#limparTri {
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+    background-color: #009246;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    box-shadow: 2px 2px 5px var(--cor-box-shadow);
+
+
+
+}
+
+#limparTri:hover {
 
     transform: scale(1.1);
 }
 
-label{
+label {
     font-family: "Raleway", sans-serif;
 }
 
-input{
+input {
     font-family: "Raleway", sans-serif;
     background-color: #f0f0f0;
     font-size: large;
-    display:flex;
     border-radius: 5px;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; 
-    
-    
-    
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
+    width: 100px;
+    margin: 15px;
+    padding-left: 8px;
+    border: none;
+
+
+
 }
 
-#tipoTriangulo{
+
+#btTrocaTema {
+
+    padding: 10px 10px 10px 10px;
+    background-color: var(--cor-fundo-ancora);
+    color: var(---cor-primaria-texto);
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    justify-content: left;
+    cursor: pointer;
+    display: flex;
+    position: fixed;
+    bottom: 2rem;
+    left: 2.5rem;
+    box-shadow: var(--cor-box-shadow);
+
+
+}
+
+#btTrocaTema:hover {
+    transform: scale(1.1);
+}
+
+#btTrocaTema:active {
+    box-shadow: inset 1px 1px 1px var();
+}
+
+#btTrocaTema img {
+    height: 20px;
+    justify-content: center;
+
+}
+
+#tipoTriangulo {
     justify-content: center;
 }
-    
 
-
-h1,h2,h3 {
-     font-family: "Raleway", sans-serif;
-     text-align: center;
+#resultadoTriangulo {
+    color: var(--cor-titulo);
 }
 
-.elementos-em-linha{
+
+h1,
+h2,
+h3 {
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    font-size: medium;
+    color: var(--cor-titulo);
+}
+
+.elementos-em-linha {
     display: flex;
     justify-content: center;
 
 }
 
+#botoes {
+    display: flex;
+    justify-content: center;
 
 
+}
 
-    
+#resultadoTriangulo {
+    padding-bottom: 3%;
+
+}
+
+[data-tema="dark"] {
+    --plano-fundo: #232b2b;
+    ---cor-primaria-texto: #cacfd5;
+    --cor-fundo-tags: black;
+    --cor-box-shadow: #727f90;
+    --cor-titulo: #cacfd5;
+    --cor-fundo-ancora: #7f7f7f;
+    --cor-barra-da-pagina: #1e90ff;
+    --cor-fundo-bdp: black;
+    --header-cor-fundo: rgba(0, 0, 0, 0.5);
+    --cor-fundo-section: #3b444b;
+
+
+}
+
+[data-tema="light"] {
+    --plano-fundo: #b2d8d8;
+    ---cor-primaria-texto: #e5e6eb;
+    --cor-fundo-tags: #d3ffc;
+    --cor-titulo: #004c4c;
+    --cor-fundo-ancora: #008080;
+    --cor-barra-da-pagina: #00d27f;
+    --cor-box-shadow: rgba(0, 0, 0, 0.5);
+    --header-cor-fundo: rgba(238, 238, 238, 0);
+    --cor-fundo-section: #66b2b2;
+
+}

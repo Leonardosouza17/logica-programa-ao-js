@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" data-tema="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Desconto Clientes</h1>
     <h2>Digite o Desconto:</h2>
 
     <form action="" id="tipodesconto">
         <label for="tipoCliente">cliente </label>
-        <select  id="tipoCliente">
+        <select id="tipoCliente">
             <option value="comum"> Comum</option>
             <option value="funcionario"> Funcionário</option>
             <option value="vip"> Vip</option>
         </select>
 
-        
+
 
         <button type="button" id="btdescont">Calcular</button>
-        <button type="reset"id="limpardescont">Limpar</button>
+        <button type="reset" id="limpardescont">Limpar</button>
 
         <p id="saida"></p>
 
@@ -31,23 +34,24 @@
 
     <div id="resultadodesconto"></div>
 
-    <button type="button" id="btTrocaTema"> 
+    <button type="button" id="btTrocaTema">
 
         <img src="lua.png" alt="">
         <img src="sol.png" alt="">
     </button>
-    
+
     <script src="tema.js"></script>
     <script src="exercicio2.js"></script>
 
     <script>
-    document.querySelector("#btdescont").addEventListener('click', function (event) {
-        event.preventDefault();
-        escolha = document.getElementById('tipoCliente').value;
-        calculo = descontos(escolha);
-        document.getElementById('resultadodesconto').innerHTML = `${calculo}`
-    })
+        document.querySelector("#btdescont").addEventListener('click', function (event) {
+            event.preventDefault();
+            escolha = document.getElementById('tipoCliente').value;
+            calculo = descontos(escolha);
+            document.getElementById('resultadodesconto').innerHTML = `${calculo}`
+        })
     </script>
 
 </body>
+
 </html>

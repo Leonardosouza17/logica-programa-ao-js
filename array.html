@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-tema="light">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    
     <style>
-        label[for="nome"] {
-            color:green
-        }
+        
         
         .oculto{
             display: none;
@@ -18,19 +19,37 @@
 </head>
 <body>
 
+    
+
+    <section>
+    <h1 class="titulo-pagina"> Busca Nome </h1>
+
     <form action="">
-
-        <label for="nome"> Nome para incluir:</label>
-        <input type="text" id="nome" required autofocus>
-
+        <div class="elementos-em-linha">
+        
+        <input type="text" id="nome" required autofocus placeholder="Nome para incluir:">
+          
+    </div>
+    </form>
+    <div id="botoes">
         <button type="reset" id="btCadastrar">Cadastrar</button>
-
         <button type="button" id="btPesquisar" class="oculto">Pesquisar</button>
 
-        
+    </div>
 
-    </form>
+    </div>
 
+    </section>
+
+    <button type="button" id="btTrocaTema"> 
+
+        <img src="lua.png" alt="">
+        <img src="sol.png" alt="">
+    </button>
+    
+        <script src="tema.js"></script>
+        <script src="array.js"></script>
+         
         <div id="resultado"></div>
     
     <script>
