@@ -1,51 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-tema="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        label[for="nome"] {
-            color:green
-        }
-        
-        .oculto{
-            display: none;
-            
-        }
 
+    <style>
+        .oculto {
+            display: none;
+
+        }
     </style>
 </head>
+
 <body>
 
-    <form action="">
+    <a href="index.html" id="ancora"> Voltar </a>
 
-        <label for="nome"> Nome para incluir:</label>
-        <input type="text" id="nome" required autofocus>
 
-        <button type="reset" id="btCadastrar">Cadastrar</button>
 
-        <button type="button" id="btPesquisar" class="oculto">Pesquisar</button>
+    <section>
+        <h1 class="titulo-pagina"> Busca Nome </h1>
 
-        
+        <form action="">
+            <div class="elementos-em-linha">
 
-    </form>
+                <input type="text" id="nome" required autofocus placeholder="Nome para incluir:">
 
-        <div id="resultado"></div>
+            </div>
+
+        </form>
+
+        <div id="botoes">
+
+            <button type="reset" id="btCadastrar">Cadastrar</button>
+            <button type="button" id="btPesquisar" class="oculto">Pesquisar</button>
+
+        </div>
+
+        </div>
+
+    </section>
+
+    <button type="button" id="btTrocaTema">
+
+        <img src="sol.png" alt="">
+        <img src="lua.png" alt="">
+
+    </button>
+
+    <script src="tema.js"></script>
     
+    <script src="array.js"></script>
+
+    <div id="resultado"></div>
+
     <script>
 
-         let nomes = []; // array vazio chamado "nomes"
-        
+        let nomes = []; // array vazio chamado "nomes"
+
         document.addEventListener('keydown', (evento) => {
 
             if (evento.key === 'Enter') {
 
                 evento.preventDefault();
 
-                if (nomes.length < 10 ) {
-                
+                if (nomes.length < 10) {
+
                     document.querySelector('#btCadastrar').click();
 
                 } else {
@@ -54,7 +78,7 @@
                 }
             }
         });
-        
+
 
         document.querySelector('#btCadastrar').addEventListener('click', () => {
 
@@ -75,7 +99,7 @@
 
 
 
-            
+
 
         });
 
@@ -94,12 +118,16 @@
 
         });
 
-        // TODO: 
-       
-        // 3. Após o 10° nome, o campo permite buscar un nome no array
-        // 4. Exibir se o nome foi encontrado
+
 
     </script>
-    
+
+    <script>
+        document.querySelector('#tema-claro').addEventListener('click', () => {
+
+
+        })
+    </script>
 </body>
+
 </html>

@@ -32,9 +32,16 @@ section {
 }
 
 
+
+
 #btTriangulo,
 #btCadastrar,
-#btPesquisar {
+#btPesquisar,
+#btConverteTemp,
+#btCalcIMC,
+#btdescont,
+#btfutebol,
+#calccomb {
     font-family: "Raleway", sans-serif;
     font-size: medium;
     background-color: #ce2b37;
@@ -52,12 +59,22 @@ section {
 
 #btTriangulo:hover,
 #btCadastrar:hover,
-#btPesquisar:hover {
+#btPesquisar:hover,
+#btConverteTemp:hover,
+#btCalcIMC:hover,
+#btdescont:hover,
+#btfutebol:hover,
+#calccomb:hover {
     transform: scale(1.1);
 
 }
 
-#limparTri {
+#limparTri,
+#btLimpaTemp,
+#btLimpaIMC,
+#limpardescont,
+#btlimpa,
+#limparesultado {
     font-family: "Raleway", sans-serif;
     font-size: medium;
     background-color: #009246;
@@ -72,16 +89,23 @@ section {
 
 }
 
-#limparTri:hover {
+#limparTri:hover,
+#btLimpaTemp:hover,
+#btLimpaIMC:hover,
+#limpardescont:hover,
+#btlimpa:hover,
+#limparesultado:hover {
 
     transform: scale(1.1);
 }
 
 label {
     font-family: "Raleway", sans-serif;
+    padding-top: 20px;
+    color: #b0afae;
 }
 
-input {
+input, select {
     font-family: "Raleway", sans-serif;
     background-color: #f0f0f0;
     font-size: large;
@@ -93,10 +117,41 @@ input {
     margin: 15px;
     padding-left: 8px;
     border: none;
+}
 
-
+ a{
+    color: #cacfd5;
+    background-color: #7f7f7f;
+    border-radius: 5px;
+    display: flex;
+    margin-bottom: 15px;
+    transition-duration: 0.4s;
+    padding: 5px;
 
 }
+
+a:hover{
+    transform: scale(1.1);
+}
+
+#ancora{
+    padding: 10px 10px 10px 10px;
+    background-color: var(--cor-fundo-ancora);
+    color: var(---cor-primaria-texto);
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    justify-content: left;
+    cursor: pointer;
+    display: flex;
+    position: fixed;
+    bottom: 2rem;
+    left: 2.5rem;
+    box-shadow: var(--cor-box-shadow);
+   
+}
+
 
 
 #btTrocaTema {
@@ -113,7 +168,7 @@ input {
     display: flex;
     position: fixed;
     bottom: 2rem;
-    left: 2.5rem;
+    right: 2.5rem;
     box-shadow: var(--cor-box-shadow);
 
 
@@ -132,6 +187,9 @@ input {
     justify-content: center;
 
 }
+
+
+
 
 #tipoTriangulo {
     justify-content: center;

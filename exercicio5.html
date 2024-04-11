@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular Combustível</title>
-    <link rel="stylesheet" href="exercicio5.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <a href="index.html"  id="ancora"> Voltar </a>
+
     <section>
+
         <h2>Calculador De Combustível</h2>
 
         <div class="elementos-em-linha">
@@ -22,6 +26,7 @@
             <select name="combustivel" id="combustivel">
                 <option value="alcool">Álcool</option>
                 <option value="gasolina">Gasolina</option>
+
             </select>
 
         </div>
@@ -29,11 +34,25 @@
         <div id="resultado"></div>
 
         <div id="botoes">
+
             <button type="button" onclick="calculacomb()" id="calccomb">Calcular</button>
             <button type="reset" id="limparesultado">Limpar</button>
+
         </div>
+
     </section>
 
+
+    <button type="button" id="btTrocaTema">
+
+        <img src="sol.png" alt="">
+        <img src="lua.png" alt="">
+
+    </button>
+    
+    <script src="tema.js"></script>
+    
+    <script src="exercicio5.js"></script>
 
 
     <script>

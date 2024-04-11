@@ -11,29 +11,47 @@
 
 <body>
 
+    <a href="index.html"  id="ancora"> Voltar </a>
+
     <section>
         <form action="" id="placarJogo">
+
             <div class="elementos-em-linha">
+
                 <label for="timeA">PALMEIRAS</label>
                 <input type="number" id="timeA" min="0">
 
                 <label for="timeB">FLAMENGO</label>
                 <input type="number" id="timeB" min="0">
+
             </div>
 
             <div id="resultadoJogo"></div>
 
             <div id="botoes">
+
                 <button type="button" id="btfutebol">Calcular</button>
                 <button type="reset" id="btlimpa">Limpar</button>
+
             </div>
         </form>
 
     </section>
 
+
+    <button type="button" id="btTrocaTema">
+
+        <img src="lua.png" alt="">
+        <img src="sol.png" alt="">
+
+    </button>
+
+    <script src="tema.js"></script>
+
     <script src="exercicio3.js"></script>
 
     <script>
+        
         document.querySelector('#btfutebol').addEventListener('click', function () {
             const timeA = document.querySelector('#timeA').value;
             const timeB = document.querySelector('#timeB').value;
