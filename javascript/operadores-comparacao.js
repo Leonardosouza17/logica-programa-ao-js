@@ -15,7 +15,7 @@ const condicao = a == b;
 
 //Estrutura IF-ELSE
 
-if (condicao) { 
+if (condicao) {
     console.log('VERDADEIRO');
 } else {
     console.log('FALSO');

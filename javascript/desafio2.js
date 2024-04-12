@@ -21,32 +21,32 @@
 //Organização Mundial da Saúde (OMS): https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
 
 function calculaIMC(peso, altura) {
-    
+
     const imc = peso / altura ** 2;
     let mensagem;
-    
-          
-    if ( imc <= 18.5 ) {
-            mensagem = (` Abaixo do peso ${imc.toFixed(1)}`);
-    
-    } else if (imc <= 24.9 ){
+
+
+    if (imc <= 18.5) {
+        mensagem = (` Abaixo do peso ${imc.toFixed(1)}`);
+
+    } else if (imc <= 24.9) {
         mensagem = (`Peso normal ${imc.toFixed(1)}`);
-    
+
     } else if (imc <= 29.9) {
         mensagem = (`Sobrepeso ${imc.toFixed(1)}`);
-    
+
     } else if (imc <= 34.9) {
         mensagem = (`Obesidade grau I ${imc.toFixed(1)}`);
-    
-    } else  if (imc <= 39.9) {
-        mensagem = ( `Obesidade grau II ${imc.toFixed(1)}`);
-    
-    } else  {
+
+    } else if (imc <= 39.9) {
+        mensagem = (`Obesidade grau II ${imc.toFixed(1)}`);
+
+    } else {
         mensagem = (`Obesidade grau III ${imc.toFixed(1)}`);
     }
 
     return mensagem;
-    
+
 
 }
 
@@ -56,6 +56,6 @@ function calculaIMC(peso, altura) {
 
 
 
- 
+
 
 

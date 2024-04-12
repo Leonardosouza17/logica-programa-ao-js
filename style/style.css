@@ -13,23 +13,86 @@ body {
     background-color: var(--plano-fundo);
     ;
     /*#e5ffcc*/
-    padding: 6%;
+    /* padding: 6%; */
     font-family: var(--fonte-geral);
-    display: flex;
-    justify-content: center;
 
 
 }
 
 section {
     background-color: var(--cor-fundo-section);
-    padding: 8%;
+    padding: 8% ;
+    margin: 10% 10% 10px 10%;
     border-radius: 10px;
     box-shadow: 2px 2px 5px var(--cor-box-shadow);
-    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 
 
 }
+
+header {
+    position: sticky;
+    top: 0;
+    justify-content: space-evenly;
+    height: 90px;
+    padding: 10px 0 10px 0;
+    backdrop-filter: blur(2px) brightness(80%) saturate(120%);
+    background-color: var(--header-cor-fundo rgba(255, 255, 255, 0.5));
+    background-color: var(--header-cor-fundo rgba(0, 0, 0, 0.5));
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 30px;
+    background-color: var(--cor-fundo-ancora);
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    background-color: var(--cor-fundo-ancora#00d27f);
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--cor-fundo-bdp);
+    background-color: var(--cor-fundo-bdp#d3ffce);
+    border-radius: 6px;
+    
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor-barra-da-pagina);
+    background-color: var(--cor-barra-da-pagina#00d27f);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+
 
 
 
@@ -55,6 +118,8 @@ section {
 
 
 }
+
+
 
 
 #btTriangulo:hover,
@@ -105,7 +170,8 @@ label {
     color: #b0afae;
 }
 
-input, select {
+input,
+select {
     font-family: "Raleway", sans-serif;
     background-color: #f0f0f0;
     font-size: large;
@@ -119,7 +185,7 @@ input, select {
     border: none;
 }
 
- a{
+a {
     color: #cacfd5;
     background-color: #7f7f7f;
     border-radius: 5px;
@@ -130,11 +196,11 @@ input, select {
 
 }
 
-a:hover{
+a:hover {
     transform: scale(1.1);
 }
 
-#ancora{
+#ancora {
     padding: 10px 10px 10px 10px;
     background-color: var(--cor-fundo-ancora);
     color: var(---cor-primaria-texto);
@@ -149,8 +215,10 @@ a:hover{
     bottom: 2rem;
     left: 2.5rem;
     box-shadow: var(--cor-box-shadow);
-   
+
 }
+
+
 
 
 
@@ -195,7 +263,8 @@ a:hover{
     justify-content: center;
 }
 
-#resultadoTriangulo {
+#resultadoTriangulo,
+#resultado {
     color: var(--cor-titulo);
 }
 
@@ -234,7 +303,7 @@ h3 {
     --cor-box-shadow: #727f90;
     --cor-titulo: #cacfd5;
     --cor-fundo-ancora: #7f7f7f;
-    --cor-barra-da-pagina: #1e90ff;
+    --cor-barra-da-pagina: #7f7f7f;
     --cor-fundo-bdp: black;
     --header-cor-fundo: rgba(0, 0, 0, 0.5);
     --cor-fundo-section: #3b444b;
@@ -248,7 +317,7 @@ h3 {
     --cor-fundo-tags: #d3ffc;
     --cor-titulo: #004c4c;
     --cor-fundo-ancora: #008080;
-    --cor-barra-da-pagina: #00d27f;
+    --cor-barra-da-pagina: #008080;
     --cor-box-shadow: rgba(0, 0, 0, 0.5);
     --header-cor-fundo: rgba(238, 238, 238, 0);
     --cor-fundo-section: #66b2b2;
