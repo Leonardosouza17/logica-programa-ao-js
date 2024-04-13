@@ -21,8 +21,8 @@ body {
 
 section {
     background-color: var(--cor-fundo-section);
-    padding: 8% ;
-    margin: 10% 10% 10px 10%;
+    padding:  8% 8% ;
+    margin: 10% 15% 15% 10% ;
     border-radius: 10px;
     box-shadow: 2px 2px 5px var(--cor-box-shadow);
     display: flex;
