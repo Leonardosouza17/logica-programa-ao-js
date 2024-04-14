@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/style.css">
+
+</head>
+
+<body>
+
+    <a href="/html/index.html" id="ancora"> Voltar </a>
+
+    <section>
+
+        <h1>Taxa de Natalidade e Mortalidade</h1>
+
+
+        <label for="habitantes">Número de Habitantes:</label>
+        <input type="number" id="habitantes">
+
+        <label for="nascimentos">Número de Nascimentos:</label>
+        <input type="number" id="nascimentos">
+
+        <label for="obitos">Número de Óbitos:</label>
+        <input type="number" id="obitos">
+
+        <label for="opcao">Escolha a opção:</label>
+        <select id="opcao">
+            <option value="N">Taxa de Natalidade</option>
+            <option value="M">Taxa de Mortalidade</option>
+        </select>
+
+        <div id="resultado"></div>
+
+        <button  id="btcalcula"     onclick="calcularTaxa()">Calcular</button>
+        <button type="reset" id="btlimpa">Limpar</button>
+
+        
+
+    </section>
+
+
+
+
+    <button type="button" id="btTrocaTema">
+
+        <img src="/img/lua.png" alt="">
+        <img src="/img/sol.png" alt="">
+
+    </button>
+
+    <script src="/javascript/tema.js"></script>
+    <script src="/javascript/exercicio7.js"></script>
+
+    <script>
+
+        function calcularTaxa() {
+
+            const habitantes = parseInt(document.getElementById("habitantes").value);
+            const nascimentos = parseInt(document.getElementById("nascimentos").value);
+            const obitos = parseInt(document.getElementById("obitos").value);
+            const opcao = document.getElementById("opcao").value;
+
+            let resultado = 0;
+
+            if (opcao === "N") {
+                resultado = (nascimentos * 1000) / habitantes;
+                document.getElementById("resultado").innerText = `Taxa de Natalidade: ${resultado.toFixed(2)} nascimentos por 1000 habitantes.`;
+
+            } else if (opcao === "M") {
+                resultado = (obitos * 1000) / habitantes;
+                document.getElementById("resultado").innerText = `Taxa de Mortalidade: ${resultado.toFixed(2)} óbitos por 1000 habitantes.`;
+
+            } else {
+                document.getElementById("resultado").innerText = "Opção inválida.";
+            }
+        }
+
+        document.querySelector('#btlimpa').addEventListener('click', function () {
+            document.querySelector('#resultado').innerHTML = '';
+        });
+
+    </script>
+
+</body>
+
+</html>

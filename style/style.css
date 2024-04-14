@@ -21,13 +21,13 @@ body {
 
 section {
     background-color: var(--cor-fundo-section);
-    padding:  8% 8% ;
+    padding:  8% 8% 8% 8%;
     margin: 10% 15% 15% 10% ;
     border-radius: 10px;
     box-shadow: 2px 2px 5px var(--cor-box-shadow);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center; 
 
 
 
@@ -92,11 +92,6 @@ nav ul li a {
 }
 
 
-
-
-
-
-
 #btTriangulo,
 #btCadastrar,
 #btPesquisar,
@@ -104,7 +99,8 @@ nav ul li a {
 #btCalcIMC,
 #btdescont,
 #btfutebol,
-#calccomb {
+#calccomb,
+#btcalcula {
     font-family: "Raleway", sans-serif;
     font-size: medium;
     background-color: #ce2b37;
@@ -120,8 +116,6 @@ nav ul li a {
 }
 
 
-
-
 #btTriangulo:hover,
 #btCadastrar:hover,
 #btPesquisar:hover,
@@ -129,7 +123,8 @@ nav ul li a {
 #btCalcIMC:hover,
 #btdescont:hover,
 #btfutebol:hover,
-#calccomb:hover {
+#calccomb:hover,
+#btcalcula:hover {
     transform: scale(1.1);
 
 }
@@ -167,7 +162,8 @@ nav ul li a {
 label {
     font-family: "Raleway", sans-serif;
     padding-top: 20px;
-    color: #b0afae;
+    color: var(--cor-label)
+    
 }
 
 input,
@@ -296,6 +292,12 @@ h3 {
 
 }
 
+#valorTemperatura,
+#escalaAtual,
+#escalaConvertida {
+    width: 25%;
+}
+
 [data-tema="dark"] {
     --plano-fundo: #232b2b;
     ---cor-primaria-texto: #cacfd5;
@@ -307,6 +309,7 @@ h3 {
     --cor-fundo-bdp: black;
     --header-cor-fundo: rgba(0, 0, 0, 0.5);
     --cor-fundo-section: #3b444b;
+    --cor-label: #b0afae;
 
 
 }
@@ -321,5 +324,6 @@ h3 {
     --cor-box-shadow: rgba(0, 0, 0, 0.5);
     --header-cor-fundo: rgba(238, 238, 238, 0);
     --cor-fundo-section: #66b2b2;
+    --cor-label: black;
 
 }

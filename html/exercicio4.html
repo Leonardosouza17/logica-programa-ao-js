@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Exercício 4</title>
     <link rel="stylesheet" href="/style/reset.css">
     <link rel="stylesheet" href="/style/style.css">
 
@@ -28,11 +28,13 @@
         <form action="">
             <div class="elementos-em-linha">
 
-                <input type="text" id="nome" required autofocus placeholder="Nome para incluir:">
+                <input type="text" id="nome"  autofocus placeholder="Nome para incluir">
 
             </div>
 
         </form>
+
+        <div id="resultado"></div>
 
         <div id="botoes">
 
@@ -56,7 +58,7 @@
     
     <script src="/javascript/array.js"></script>
 
-    <div id="resultado"></div>
+   
 
     <script>
 
@@ -88,7 +90,8 @@
             if (nomes.length === 10) {
 
                 //troque a label do input "nome"
-                document.querySelector('label[for="nome"]').innerHTML = 'Nome para pesquisar';
+                document.querySelector('label[for="nome"]').innerHTML = 'Nome para pesquisar:';
+                
 
                 // oculte o botão cadastrar
                 document.querySelector('#btCadastrar').classList.add('oculto');
@@ -122,12 +125,7 @@
 
     </script>
 
-    <script>
-        document.querySelector('#tema-claro').addEventListener('click', () => {
-
-
-        })
-    </script>
+    
 </body>
 
 </html>

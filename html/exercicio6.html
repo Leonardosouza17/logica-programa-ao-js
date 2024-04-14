@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/style.css">
+
+
+</head>
+
+<body>
+
+    <a href="/html/index.html" id="ancora"> Voltar </a>
+
+    <section>
+
+        <h1>Calcular Desconto</h1>
+
+        <div class="elementos-em-linha">
+
+
+            <input type="text" id="codigo" placeholder="Código">
+
+
+            <input type="number" id="quantidade" placeholder="Quantidade:">
+        </div>
+
+        <div id="resultado"></div>
+
+        <div id="botoes">
+
+            <button id="btcalcula" onclick="calcularDesconto()">Calcular</button>
+            <button type="reset" id="btlimpa">Limpar</button>
+
+        </div>
+
+    </section>
+
+    <button type="button" id="btTrocaTema">
+
+        <img src="/img/lua.png" alt="">
+        <img src="/img/sol.png" alt="">
+
+    </button>
+
+    <script src="/javascript/tema.js"></script>
+    <script src="/javascript/exercicio6.js"></script>
+
+    <script>
+
+        const produtos = {
+            "produto1": { "nome": "Produto 1", "preco": 10 },
+            "produto2": { "nome": "Produto 2", "preco": 20 },
+
+        };
+
+        function calcularDesconto() {
+
+            const codigo = document.getElementById("codigo").value;
+            const quantidade = parseInt(document.getElementById("quantidade").value);
+            const produto = produtos[codigo];
+
+            if (!produto) {
+                document.getElementById("resultado").innerText = "Produto não encontrado.";
+                return;
+            }
+
+            let desconto = 0;
+            if (quantidade >= 3 | quantidade <= 5) {
+                desconto = 0.02;
+
+            } else if (quantidade >= 6 && quantidade <= 10) {
+                desconto = 0.03;
+
+            } else if (quantidade > 10) {
+                desconto = 0.05;
+            }
+
+            const valorDesconto = produto.preco * quantidade * desconto;
+            const totalComDesconto = produto.preco * quantidade - valorDesconto;
+
+            document.getElementById("resultado").innerText = `Nome do Produto: ${produto.nome}\nPreço Unitário: R$ ${produto.preco}\nQuantidade: ${quantidade}\nDesconto Aplicado: ${desconto * 100}%\nValor do Desconto: R$ ${valorDesconto.toFixed(2)}\nTotal com Desconto: R$ ${totalComDesconto.toFixed(2)}`;
+        };
+
+        document.querySelector('#btlimpa').addEventListener('click', function () {
+            document.querySelector('#resultado').innerHTML = '';
+        });
+
+    </script>
+</body>
+
+</html>
