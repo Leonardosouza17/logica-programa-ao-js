@@ -19,15 +19,38 @@ body {
 
 }
 
+
+table {
+    border-collapse: collapse;
+    width: 40%;
+    margin-top: 6%;
+    margin-left: 11%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
 section {
     background-color: var(--cor-fundo-section);
-    padding:  8% 8% 8% 8%;
-    margin: 10% 15% 15% 10% ;
+    padding: 5% 5% 5% 5%;
+    margin: 10% 30% 10% 30% ;
     border-radius: 10px;
     box-shadow: 2px 2px 5px var(--cor-box-shadow);
-    display: flex;
-    justify-content: center;
-    align-items:center; 
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items:center;  */
 
 
 
@@ -211,6 +234,7 @@ a:hover {
     bottom: 2rem;
     left: 2.5rem;
     box-shadow: var(--cor-box-shadow);
+    margin: 0%;
 
 }
 
