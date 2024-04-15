@@ -11,6 +11,44 @@
 
 <body>
 
+    <!-- <section> -->
+
+    <h1>Tabela de Descontos</h1>
+    <table>
+
+        <tr>
+            <th>Combustível</th>
+            <th>Quantidade (litros)</th>
+            <th>Desconto</th>
+        </tr>
+
+
+        <tr>
+            <td rowspan="2">Álcool</td>
+            <td>Até 20 litros</td>
+            <td>3% por litro</td>
+        </tr>
+
+        <tr>
+            <td>Acima de 20 litros</td>
+            <td>5% por litro</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">Gasolina</td>
+            <td>Até 20 litros</td>
+            <td>4% por litro</td>
+        </tr>
+
+        <tr>
+            <td>Acima de 20 litros</td>
+            <td>6% por litro</td>
+        </tr>
+
+    </table>
+
+    <!-- </section> -->
+
     <a href="/html/index.html" id="ancora"> Voltar </a>
 
     <section>
@@ -24,8 +62,8 @@
 
             <label for="combustivel">Tipo De Combustível</label>
             <select name="combustivel" id="combustivel">
-                <option value="alcool">Álcool</option>
-                <option value="gasolina">Gasolina</option>
+                <option value="A">Álcool</option>
+                <option value="G">Gasolina</option>
 
             </select>
 
@@ -52,7 +90,7 @@
 
     <script src="/javascript/tema.js"></script>
 
-    <script src="/javascript/exercicio5.js"></script>
+    <script src="/javascript/exercicio5.j"></script>
 
 
     <script>
@@ -64,9 +102,9 @@
             let preco;
             let desconto;
 
-            if (combustivel === 'alcool') {
+            if (combustivel === 'A') {
 
-                if (litros = 20) {
+                if (litros < 21) {
                     desconto = 0.03;
 
                 } else {
@@ -74,9 +112,9 @@
                 }
                 preco = 2.89;
 
-            } else if (combustivel === 'gasolina') {
+            } else if (combustivel === 'G') {
 
-                if (litros = 20) {
+                if (litros < 21) {
                     desconto = 0.04;
 
                 } else {
