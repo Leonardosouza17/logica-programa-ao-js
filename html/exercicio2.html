@@ -13,6 +13,31 @@
 
     <a href="/html/index.html" id="ancora"> Voltar </a>
 
+    <table>
+        <tr>
+            <th>tipo cliente</th>
+            <th>código</th>
+            <th>desconto</th>
+        </tr>
+        <tr>
+            <td>comum</td>
+            <td>1</td>
+            <td>sem desconto</td>
+        </tr>
+        <tr>
+            <td>funcionário</td>
+            <td>2</td>
+            <td>10%</td>
+        </tr>
+        <tr>
+            <td>vip</td>
+            <td>3</td>
+            <td>5%</td>
+        </tr>
+    </table>
+
+
+
     <section>
         <h1>Desconto Clientes</h1>
         <h2>Digite o Desconto:</h2>
@@ -26,7 +51,14 @@
                     <option value="funcionario"> Funcionário</option>
                     <option value="vip"> Vip</option>
                 </select>
+
+                <label for="valor">R$:</label>
+                <input id="valor" type="number" step="0.01" min="0.00">
+
+
             </div>
+
+
 
 
             <div id="resultadodesconto"></div>
@@ -58,8 +90,12 @@
             event.preventDefault();
             escolha = document.getElementById('tipoCliente').value;
             calculo = descontos(escolha);
-            document.getElementById('resultadodesconto').innerHTML = `${calculo}`
+            document.getElementById('resultadodesconto').innerHTML = `${calculo}`;
 
+        });
+
+        document.querySelector('#limpardescont').addEventListener('click', function () {
+            document.querySelector('#resultadodesconto').innerHTML = '';
         });
 
 

@@ -8,7 +8,7 @@
 //Dica: para calcular um percentual de um número, faça a operação desconto = valor * percentualDesconto /100
 
 function descontos(clientes) {
-    let valor = 100.00;
+    let valor = document.querySelector('#valor').value;
 
     if (clientes === 'comum'){
            resultado = valor;
