@@ -18,28 +18,38 @@
 
         <h1>Taxa de Natalidade e Mortalidade</h1>
 
+        <div class="elementos-em-linha">
 
-        <label for="habitantes">Número de Habitantes:</label>
-        <input type="number" id="habitantes">
 
-        <label for="nascimentos">Número de Nascimentos:</label>
-        <input type="number" id="nascimentos">
+            <label for="habitantes">Número de Habitantes:</label>
+            <input type="number" id="habitantes">
+
+            <label for="nascimentomortalidade">Número de nascimentos ou óbitos:</label>
+            <input type="number" id="nascimentomortalidade">
+
+            <!-- <label for="nascimentos">Número de Nascimentos:</label>
+        <input type="number" id="nascimentos" >
 
         <label for="obitos">Número de Óbitos:</label>
-        <input type="number" id="obitos">
+        <input type="number" id="obitos"> -->
 
-        <label for="opcao">Escolha a opção:</label>
-        <select id="opcao">
-            <option value="N">Taxa de Natalidade</option>
-            <option value="M">Taxa de Mortalidade</option>
-        </select>
+            <label for="opcao">Escolha a opção:</label>
+            <select id="opcao">
+                <option value="N">Taxa de Natalidade</option>
+                <option value="M">Taxa de Mortalidade</option>
+            </select>
+
+        </div>
 
         <div id="resultado"></div>
 
-        <button  id="btcalcula"     onclick="calcularTaxa()">Calcular</button>
-        <button type="reset" id="btlimpa">Limpar</button>
+        <div id="botoes">
 
-        
+            <button id="btcalcula" onclick="calcularTaxa()">Calcular</button>
+            <button type="reset" id="btlimpa">Limpar</button>
+
+        </div>
+
 
     </section>
 
@@ -61,18 +71,19 @@
         function calcularTaxa() {
 
             const habitantes = parseInt(document.getElementById("habitantes").value);
-            const nascimentos = parseInt(document.getElementById("nascimentos").value);
-            const obitos = parseInt(document.getElementById("obitos").value);
+            const nascimentomortalidade = parseFloat(document.getElementById("nascimentomortalidade").value);
+            // const nascimentos = parseInt(document.getElementById("nascimentos").value);
+            // const obitos = parseInt(document.getElementById("obitos").value);
             const opcao = document.getElementById("opcao").value;
 
             let resultado = 0;
 
             if (opcao === "N") {
-                resultado = (nascimentos * 1000) / habitantes;
+                resultado = nascimentomortalidade * 1000 / habitantes;
                 document.getElementById("resultado").innerText = `Taxa de Natalidade: ${resultado.toFixed(2)} nascimentos por 1000 habitantes.`;
 
             } else if (opcao === "M") {
-                resultado = (obitos * 1000) / habitantes;
+                resultado = nascimentomortalidade * 1000 / habitantes;
                 document.getElementById("resultado").innerText = `Taxa de Mortalidade: ${resultado.toFixed(2)} óbitos por 1000 habitantes.`;
 
             } else {
