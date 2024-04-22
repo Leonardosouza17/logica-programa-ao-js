@@ -24,11 +24,11 @@ table {
     border-collapse: collapse;
     width: 40%;
     margin-top: 6%;
-    margin-left: 11%;
     /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
-    border-radius: 5px;
+    justify-content: center;
+    /* align-items: center; */
+    /* border-radius: 10px; */
+    margin-left: 30%;
 
 
 
@@ -41,24 +41,27 @@ td {
     text-align: left;
     /* border-radius: 5px; */
     background-color: var(--cor-fundo-section);
+    color: var(---cor-primaria-texto);
 
 
 }
 
 th {
     background-color: var(--cor-fundo-section);
+
 }
 
 section {
     background-color: var(--cor-fundo-section);
-    padding: 5% 5% 5% 5%;
+    padding: 5%;
     margin: 10% 30% 10% 30%;
     border-radius: 10px;
     box-shadow: 2px 2px 5px var(--cor-box-shadow);
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items:center;  */
-
+    /* display: flex;  */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 
 
 }
@@ -194,7 +197,7 @@ html {
 
 label {
     font-family: "Raleway", sans-serif;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     color: var(--cor-label)
 }
 
@@ -204,13 +207,16 @@ select {
     background-color: #f0f0f0;
     font-size: large;
     border-radius: 5px;
-    justify-content: center;
+    /* justify-content: center; */
     /* Centraliza o conteúdo horizontalmente */
+    display: flex;
+    /* flex-direction: column; */
     align-items: center;
     width: 100px;
     margin: 15px;
     padding-left: 8px;
     border: none;
+    margin-bottom: 10px;
 }
 
 a {
@@ -305,6 +311,11 @@ h3 {
     text-align: center;
     font-size: medium;
     color: var(--cor-titulo);
+    background-color: var(--cor-fundo-section);
+    border-radius: 10px;
+    margin: 5%;
+    margin-bottom: 5%;
+    padding: 7px;
 }
 
 .elementos-em-linha {
@@ -316,6 +327,7 @@ h3 {
 #botoes {
     display: flex;
     justify-content: center;
+    margin-top: 5%;
 
 
 }
@@ -349,7 +361,7 @@ h3 {
 
 [data-tema="light"] {
     --plano-fundo: #b2d8d8;
-    ---cor-primaria-texto: #e5e6eb;
+    ---cor-primaria-texto: #3b444b;
     --cor-fundo-tags: #d3ffc;
     --cor-titulo: #004c4c;
     --cor-fundo-ancora: #008080;
@@ -360,3 +372,14 @@ h3 {
     --cor-label: black;
 
 }
+
+
+/* .section {
+    display: flex;
+    flex-direction: column;
+    background-color: #00d27f; }*/
+
+
+/* .inputs-section input {
+    margin-bottom: 10px;
+  } */
