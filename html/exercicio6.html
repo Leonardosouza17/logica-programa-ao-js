@@ -15,9 +15,9 @@
 
     <a href="/html/index.html" id="ancora"> Voltar </a>
 
+    <h1>Calcular Desconto</h1>
     <section>
 
-        <h1>Calcular Desconto</h1>
 
         <div class="elementos-em-linha">
 
@@ -72,7 +72,7 @@
             if (quantidade >= 3 | quantidade <= 5) {
                 desconto = 0.02;
 
-            } else if (quantidade >= 6 && quantidade <= 10) {
+            } else if (quantidade >= 6 || quantidade <= 10) {
                 desconto = 0.03;
 
             } else if (quantidade > 10) {
