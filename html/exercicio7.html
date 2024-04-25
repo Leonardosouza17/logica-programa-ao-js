@@ -60,36 +60,7 @@
     <script src="/javascript/tema.js"></script>
     <script src="/javascript/exercicio7.js"></script>
 
-    <script>
-
-        function calcularTaxa() {
-
-            const habitantes = parseInt(document.getElementById("habitantes").value);
-            const nascimentomortalidade = parseFloat(document.getElementById("nascimentomortalidade").value);
-            // const nascimentos = parseInt(document.getElementById("nascimentos").value);
-            // const obitos = parseInt(document.getElementById("obitos").value);
-            const opcao = document.getElementById("opcao").value;
-
-            let resultado = 0;
-
-            if (opcao === "N") {
-                resultado = nascimentomortalidade * 1000 / habitantes;
-                document.getElementById("resultado").innerText = `Taxa de Natalidade: ${resultado.toFixed(2)} nascimentos por 1000 habitantes.`;
-
-            } else if (opcao === "M") {
-                resultado = nascimentomortalidade * 1000 / habitantes;
-                document.getElementById("resultado").innerText = `Taxa de Mortalidade: ${resultado.toFixed(2)} óbitos por 1000 habitantes.`;
-
-            } else {
-                document.getElementById("resultado").innerText = "Opção inválida.";
-            }
-        }
-
-        document.querySelector('#btlimpa').addEventListener('click', function () {
-            document.querySelector('#resultado').innerHTML = '';
-        });
-
-    </script>
+   
 
 </body>
 

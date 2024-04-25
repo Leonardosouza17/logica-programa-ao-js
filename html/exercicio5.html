@@ -90,56 +90,10 @@
 
     <script src="/javascript/tema.js"></script>
 
-    <script src="/javascript/exercicio5.j"></script>
+    <script src="/javascript/exercicio5.js"></script>
 
 
-    <script>
-
-        function calculacomb() {
-
-            let litros = document.getElementById('litros').value;
-            let combustivel = document.getElementById('combustivel').value;
-            let preco;
-            let desconto;
-
-            if (combustivel === 'A') {
-
-                if (litros < 21) {
-                    desconto = 0.03;
-
-                } else {
-                    desconto = 0.05;
-                }
-                preco = 2.89;
-
-            } else if (combustivel === 'G') {
-
-                if (litros < 21) {
-                    desconto = 0.04;
-
-                } else {
-                    desconto = 0.06;
-                }
-                preco = 5.19;
-
-            } else {
-
-                document.getElementById('resultado').innerText = " Tipo de combustível inválido";
-
-                return;
-            }
-
-            let valordeDesconto = preco * litros * (1 - desconto);
-
-            document.getElementById('resultado').innerText = "Valor a ser pago : R$" + valordeDesconto.toFixed(2);
-            document.getElementById('limparesultado').addEventListener('click', () => {
-
-                document.getElementById('resultado').innerText = '';
-
-            });
-        }
-
-    </script>
+    
 
 
 </body>

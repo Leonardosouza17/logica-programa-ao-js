@@ -8,22 +8,25 @@
 
 function calcularTaxa() {
 
-    const habitantes = parseInt(document.getElementById("habitantes").value);
-    const nascimentos = parseInt(document.getElementById("nascimentos").value);
-    const obitos = parseInt(document.getElementById("obitos").value);
+    const habitantes = parseFloat(document.getElementById("habitantes").value);
+    const nascimentomortalidade = parseFloat(document.getElementById("nascimentomortalidade").value);
     const opcao = document.getElementById("opcao").value;
 
     let resultado = 0;
 
     if (opcao === "N") {
-        resultado = (nascimentos * 1000) / habitantes;
+        resultado = nascimentomortalidade * 1000 / habitantes;
         document.getElementById("resultado").innerText = `Taxa de Natalidade: ${resultado.toFixed(2)} nascimentos por 1000 habitantes.`;
 
     } else if (opcao === "M") {
-        resultado = (obitos * 1000) / habitantes;
+        resultado = nascimentomortalidade * 1000 / habitantes;
         document.getElementById("resultado").innerText = `Taxa de Mortalidade: ${resultado.toFixed(2)} óbitos por 1000 habitantes.`;
 
     } else {
         document.getElementById("resultado").innerText = "Opção inválida.";
     }
 }
+
+document.querySelector('#btlimpa').addEventListener('click', function () {
+    document.querySelector('#resultado').innerHTML = '';
+});

@@ -14,32 +14,46 @@
 //Álcool: R$ 2,89
 //Gasolina: R$ 5,19
 
-function calcularPreco (litros, combustivel, precoUnitario, desconto  ) {
-   
+function calculacomb() {
 
-    if (combustivel === 'Alcool') {
-        precoUnitario = 2.89;
-        if (litros = 20) {
-            desconto = litros * 0.03;
+    let litros = document.getElementById('litros').value;
+    let combustivel = document.getElementById('combustivel').value;
+    let preco;
+    let desconto;
 
-        }else {
-            desconto = litros *0.05;
-        }
-    }else if (combustivel === 'Gasolina') {
-        precoUnitario = 5.19;
-        if (litros = 20) {
-            desconto = litros * 0.04;
+    if (combustivel === 'A') {
+
+        if (litros < 21) {
+            desconto = 0.03;
 
         } else {
-            desconto = litros * 0.06;
+            desconto = 0.05;
         }
-    } else {
-        console.log('Tipo de combustível não reconhecido.') ;
+        preco = 2.89;
 
-        
-    
+    } else if (combustivel === 'G') {
+
+        if (litros < 21) {
+            desconto = 0.04;
+
+        } else {
+            desconto = 0.06;
+        }
+        preco = 5.19;
+
+    } else {
+
+        document.getElementById('resultado').innerText = " Tipo de combustível inválido";
+
+        return;
     }
-    return;
-     let precoFinal = (precoUnitario * litros) - desconto;
-     return precoFinal.toFixed(2); 
+
+    let valordeDesconto = preco * litros * (1 - desconto);
+
+    document.getElementById('resultado').innerText = "Valor a ser pago : R$" + valordeDesconto.toFixed(2);
+    document.getElementById('limparesultado').addEventListener('click', () => {
+
+        document.getElementById('resultado').innerText = '';
+
+    });
 }
