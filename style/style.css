@@ -136,7 +136,8 @@ html {
 #btdescont,
 #btfutebol,
 #calccomb,
-#btcalcula {
+#btcalcula,
+ #btCalcular{
     font-family: "Raleway", sans-serif;
     font-size: medium;
     background-color: #ce2b37;
@@ -160,7 +161,8 @@ html {
 #btdescont:hover,
 #btfutebol:hover,
 #calccomb:hover,
-#btcalcula:hover {
+#btcalcula:hover,
+#btCalcular:hover {
     transform: scale(1.1);
 
 }
@@ -170,7 +172,8 @@ html {
 #btLimpaIMC,
 #limpardescont,
 #btlimpa,
-#limparesultado {
+#limparesultado,
+#btlimpar {
     font-family: "Raleway", sans-serif;
     font-size: medium;
     background-color: #009246;
@@ -190,7 +193,8 @@ html {
 #btLimpaIMC:hover,
 #limpardescont:hover,
 #btlimpa:hover,
-#limparesultado:hover {
+#limparesultado:hover,
+#btlimpar:hover {
 
     transform: scale(1.1);
 }
@@ -370,6 +374,11 @@ h3 {
     --header-cor-fundo: rgba(238, 238, 238, 0);
     --cor-fundo-section: #66b2b2;
     --cor-label: black;
+
+}
+
+.monetario::before {
+    content: "R$ ";
 
 }
 
