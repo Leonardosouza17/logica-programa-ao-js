@@ -10,28 +10,28 @@
 </head>
 
 <body>
-
-    <a href="/html/index.html" id="ancora"> Voltar </a>
-
+    
+    <!-- <a href="/html/index.html" id="ancora"> Voltar </a> -->
+    
     <h1>Calculador De Lados Do Triângulo</h1>
-
+    
     <section>
-
+        
         <h1>Calcule os Triângulos</h1>
         <h2>Coloque os valores aos lados correspondentes :</h2>
 
-
+        
         <form action="" id="tipoTriangulo">
             <div class="elementos-em-linha">
-
+                
                 <input type="number" id="ladoA" min="1" placeholder=" lado 1">
-
-
+                
+                
                 <input type="number" id="ladoB" min="1" placeholder=" lado 2">
-
+                
                 <input type="number" id="ladoC" min="1" placeholder=" lado 3">
             </div>
-
+            
         </form>
         <div id="resultadoTriangulo"></div>
         <div id="botoes">
@@ -39,34 +39,37 @@
             <button type="reset" id="limparTri">Limpar</button>
         </div>
     </section>
-
+    
     <button type="button" id="btTrocaTema">
-
+        
         <img src="/img/lua.png" alt="">
         <img src="/img/sol.png" alt="">
     </button>
-
+    
     <script src="/javascript/tema.js"></script>
     <script src="/javascript/exercicio1.js"></script>
-
+    <!-- -->
+    <script src="/javascript/navbar.js"></script>
+    
+    
     <script>
-
+        
         document.querySelector('#btTriangulo').addEventListener('click', () => { //arrow function =>
             const ladoA = document.querySelector('#ladoA').value;
             const ladoB = document.querySelector('#ladoB').value;
             const ladoC = document.querySelector('#ladoC').value;
-
+            
             const triangulos = triangulo(ladoA, ladoB, ladoC);
-
+            
             document.querySelector('#resultadoTriangulo').innerHTML = `Classificação do Triângulo: ${triangulos.mensagem}`;
         })
-
+        
         document.querySelector('#limparTri').addEventListener('click', function () {
             document.querySelector('#resultadoTriangulo').innerHTML = "";
         })
-
-
-    </script>
+        
+        
+        </script>
 
 
 

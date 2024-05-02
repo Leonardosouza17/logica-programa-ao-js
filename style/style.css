@@ -66,13 +66,13 @@ section {
 
 }
 
-header {
+/* header {
     position: sticky;
     top: 0;
     justify-content: space-evenly;
-    height: 90px;
     padding: 10px 0 10px 0;
     backdrop-filter: blur(2px) brightness(80%) saturate(120%);
+    background:transparent;
     background-color: var(--header-cor-fundo rgba(255, 255, 255, 0.5));
     background-color: var(--header-cor-fundo rgba(0, 0, 0, 0.5));
 }
@@ -100,7 +100,7 @@ nav ul li a {
     border-radius: 50px;
     transition: transform 0.3s ease;
     background-color: var(--cor-fundo-ancora#00d27f);
-}
+} */
 
 
 ::-webkit-scrollbar {
@@ -223,7 +223,7 @@ select {
     margin-bottom: 10px;
 }
 
-a {
+/* a {
     color: #cacfd5;
     background-color: #7f7f7f;
     border-radius: 5px;
@@ -255,7 +255,7 @@ a:hover {
     box-shadow: var(--cor-box-shadow);
     margin: 0%;
 
-}
+} */
 
 
 
