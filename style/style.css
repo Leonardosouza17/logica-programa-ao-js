@@ -66,7 +66,7 @@ section {
 
 }
 
-/* header {
+ header {
     position: sticky;
     top: 0;
     justify-content: space-evenly;
@@ -223,7 +223,7 @@ select {
     margin-bottom: 10px;
 }
 
-/* a {
+ a {
     color: #cacfd5;
     background-color: #7f7f7f;
     border-radius: 5px;
@@ -255,7 +255,7 @@ a:hover {
     box-shadow: var(--cor-box-shadow);
     margin: 0%;
 
-} */
+ }
 
 
 

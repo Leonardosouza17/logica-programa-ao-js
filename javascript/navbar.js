@@ -1,26 +1,16 @@
 // Ancora do exercício 1
 
-const aHome = document.createElement('a');
-aHome.setAttribute('href', '../html/index.html');
-aHome.innerHTML = 'Home';
+const aHome = criaAncora('../html/index.html', 'Home');
 
 const liHome = document.createElement('li');
 liHome.appendChild(aHome);
 
+const aExercicio1 = criaAncora('../html/exercicio1.html' , 'Exercicio 1');
 
-const aExercicio1 = document.createElement('a');
-aExercicio1.setAttribute('href', '../html/exercicio1.html');
-aExercicio1.innerHTML = 'Exerc.1';
+const liExercicio1 = criaLi(aExercicio1);
 
-// document.body.append(aExercicio1);
+const aExercicio6 = criaAncora('../html/teste6.html' , 'Exercicio 6');
 
-
-const liExercicio1 = document.createElement('li');
-liExercicio1.appendChild(aExercicio1);
-
-const aExercicio6 = document.createElement('a');
-aExercicio6.setAttribute('href', '../html/teste6.html');
-aExercicio6.innerHTML = 'Exerc.6';
 
 const liExercicio6 = document.createElement('li');
 liExercicio6.appendChild(aExercicio6);
@@ -43,14 +33,14 @@ divLogo.appendChild(spanLogo);
 
 const divMenuLogo = document.createElement('div');
 divMenuLogo.classList.add('logo-menu');
-divMenuLogo.appendChild(divLogo, nav);
+divMenuLogo.append(divLogo, nav);
 
 const header = document.createElement('header');
 header.appendChild(divMenuLogo);
 
 
-document.body.insertBefore(header, document.body.firstChild);
-// document.body.insertAdjacentElement('afterbegin', nav);
+// document.body.insertBefore(header, document.body.firstChild);
+document.body.insertAdjacentElement('afterbegin', header);
 
 
 
@@ -59,3 +49,23 @@ linkNavbar.setAttribute('rel', 'stylesheet');
 linkNavbar.setAttribute('href', '../style/navbar.css')
 
 document.head.appendChild(linkNavbar);
+
+function criaAncora(url, texto) {
+
+    const ancora = document.createElement('a');
+    ancora.setAttribute('href', url);
+    ancora.innerHTML = texto;
+
+    return ancora;
+
+}
+
+// Crie uma função e utilize para gerar os elementos do tipo <li>
+
+function  criaLi(ancora) {
+
+    const li = document.createElement('li');
+    li.appendChild(ancora);
+
+    return li;
+}

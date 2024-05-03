@@ -3,6 +3,21 @@
     background-color: 	#e5e6eb;
 } */
 
+ header {
+    position: sticky;
+    top: 0;
+    justify-content: space-evenly;
+    padding: 10px 0 10px 0;
+    backdrop-filter: blur(2px) brightness(80%) saturate(120%);
+    background:transparent;
+    background-color: var(--header-cor-fundo rgba(255, 255, 255, 0.5));
+    background-color: var(--header-cor-fundo rgba(0, 0, 0, 0.5));
+}
+
+
+
+
+
 span {
     color:	#4f5b66;
     font-family: "Josefin Sans", sans-serif;
