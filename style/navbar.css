@@ -3,7 +3,7 @@
     background-color: 	#e5e6eb;
 } */
 
- header {
+ /* header {
     position: sticky;
     top: 0;
     justify-content: space-evenly;
@@ -12,13 +12,13 @@
     background:transparent;
     background-color: var(--header-cor-fundo rgba(255, 255, 255, 0.5));
     background-color: var(--header-cor-fundo rgba(0, 0, 0, 0.5));
-}
+} */
 
 
 
 
 
-span {
+/* span {
     color:	#4f5b66;
     font-family: "Josefin Sans", sans-serif;
     font-size: x-large;
@@ -41,17 +41,17 @@ span {
     align-items: center;
     gap: 2rem;
     /* justify-content: space-evenly; */
-    margin-inline-end: 1.5rem;
+    /* margin-inline-end: 1.5rem; */
     
-}
+
 
 /* .menu-navegacao li {
     /* height: 100%; */
 
 
-.menu-navegacao a {
+/* .menu-navegacao a {
     display: inline-flex;
-    /* align-items: center; */
+    
     height: 100%;
     background-color: #8899a5;
     border-radius: 5px;
@@ -60,7 +60,7 @@ span {
     color:white ;
     transition-duration: 300ms;
     box-shadow: 3px 3px 5px  #243848 ;
-    /* font-weight: 600; */
+    
     
     
 }
@@ -70,12 +70,12 @@ span {
     cursor:pointer;
     background-color: #65737e;
     
-}
-.menu-navegacao a:active {
+} */
+/* .menu-navegacao a:active {
     box-shadow: inset 1px 1px 1px 
-}
+} */
 
-.breadcrumbs {
+ .breadcrumbs {
     height: 50px;
 }
 
@@ -91,31 +91,31 @@ span {
     display: inline-flex;
     align-items: center;
     height: 100%;
-}
+} 
 
 .breadcrumbs li:not(:last-child):after {
     content: "→";
-}
+} 
 /* aplica para todos os elementos, menos (não) para o último filho */
 
 /* .breadcrumbs li:last-child:after {
     content: "";
 } */
 
-.breadcrumbs li:not(:last-child)>a {
+/* .breadcrumbs li:not(:last-child)>a {
     color: #777;
     
-}
+} */
 
-.breadcrumbs a {
+ .breadcrumbs a {
     display: inline-flex;
     align-items: center;
-    /* height: 100%; */
+    
     padding: 0 1rem;
     font-family: "Josefin Sans", sans-serif;
     text-decoration: none;
     text-transform: capitalize;
-    /* color: #777; */
+    
 }
 
 .breadcrumbs li:last-child>a {
@@ -129,13 +129,108 @@ span {
 .breadcrumbs a:hover {
     text-decoration: underline;
     cursor: pointer;
-}
+} 
 
-.breadcrumbs li:last-child>a:hover {
-    /* text-decoration: none; */
+/* .breadcrumbs li:last-child>a:hover {
+ 
     cursor: default;
+} */
+
+ header {
+    position: sticky;
+    top: 0;
+    justify-content: space-evenly;
+    padding: 10px 0 10px 0;
+    backdrop-filter: blur(2px) brightness(80%) saturate(120%);
+    background:transparent;
+    background-color: var(--header-cor-fundo rgba(255, 255, 255, 0.5));
+    background-color: var(--header-cor-fundo rgba(0, 0, 0, 0.5));
 }
 
-.logo-menu {
-    display: flex;
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
 }
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 30px;
+    background-color: var(--cor-fundo-ancora);
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    background-color: var(--cor-fundo-ancora#00d27f);
+}
+
+.logo span {
+    color: azure;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    margin-inline-start: 2.5rem;
+} 
+
+
+/* .menu {
+    position: right;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu:hover ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu ul li {
+    padding: 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.menu ul li a:hover {
+    color: white;
+} */
+
