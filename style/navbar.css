@@ -1,140 +1,69 @@
-/* body {
+ /* body {
     min-height: 100vh;
-    background-color: 	#e5e6eb;
-} */
+    background-color: 	#e5e6eb; */
 
- /* header {
-    position: sticky;
-    top: 0;
-    justify-content: space-evenly;
-    padding: 10px 0 10px 0;
-    backdrop-filter: blur(2px) brightness(80%) saturate(120%);
-    background:transparent;
-    background-color: var(--header-cor-fundo rgba(255, 255, 255, 0.5));
-    background-color: var(--header-cor-fundo rgba(0, 0, 0, 0.5));
-} */
-
-
-
-
-
-/* span {
-    color:	#4f5b66;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: x-large;
-    display: flex;
-    margin-right: 35%;
-    font-weight: 700;
-}
-
-
-.menu-navegacao {
-    height: 67px;
-    background-color: 	#a7adba;
-    font-family: "Josefin Sans", sans-serif;
-}
-
-.menu-navegacao>ul {
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 2rem;
-    /* justify-content: space-evenly; */
-    /* margin-inline-end: 1.5rem; */
+    .breadcrumbs {
+        height: 50px;
+    }
     
-
-
-/* .menu-navegacao li {
-    /* height: 100%; */
-
-
-/* .menu-navegacao a {
-    display: inline-flex;
+    .breadcrumbs>ul {
+        height: 100%;
+        display: flex;
+        margin-inline-start: 1.5rem;
+        margin-top: 1%;
+        
+    }
     
-    height: 100%;
-    background-color: #8899a5;
-    border-radius: 5px;
-    padding:10px;
-    text-decoration: none;
-    color:white ;
-    transition-duration: 300ms;
-    box-shadow: 3px 3px 5px  #243848 ;
+    .breadcrumbs li {
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .breadcrumbs li:not(:last-child):after {
+        content: "→";
+    }
+    /* aplica para todos os elementos, menos (não) para o último filho */
+    
+    /* .breadcrumbs li:last-child:after {
+        content: "";
+    } */
+    
+    .breadcrumbs li:not(:last-child)>a {
+        color: white;
+        
+    }
+    
+    .breadcrumbs a {
+        display: inline-flex;
+        align-items: center;
+        /* height: 100%; */
+        padding: 0 1rem;
+        font-family: "Josefin Sans", sans-serif;
+        text-decoration: none;
+        text-transform: capitalize;
+        /* color: #777; */
+    }
+    
+    .breadcrumbs li:last-child>a {
+        background-color: 	#65737e;  
+        color:   white;                      
+        padding: 8px;
+        border-radius: 16px;
+        margin-inline-start: 8px;
+    }
+    
+       .breadcrumbs a:hover {
+        text-decoration: underline;
+        cursor: pointer; 
+     }
     
     
-    
-}
-
-.menu-navegacao a:hover{
-    transform: scale(1.1);
-    cursor:pointer;
-    background-color: #65737e;
-    
-} */
-/* .menu-navegacao a:active {
-    box-shadow: inset 1px 1px 1px 
-} */
-
- .breadcrumbs {
-    height: 50px;
-}
-
-.breadcrumbs>ul {
-    height: 100%;
-    display: flex;
-    margin-inline-start: 1.5rem;
-    margin-top: 1%;
-    
-}
-
-.breadcrumbs li {
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
-} 
-
-.breadcrumbs li:not(:last-child):after {
-    content: "→";
-} 
-/* aplica para todos os elementos, menos (não) para o último filho */
-
-/* .breadcrumbs li:last-child:after {
-    content: "";
-} */
-
-/* .breadcrumbs li:not(:last-child)>a {
-    color: #777;
-    
-} */
-
- .breadcrumbs a {
-    display: inline-flex;
-    align-items: center;
-    
-    padding: 0 1rem;
-    font-family: "Josefin Sans", sans-serif;
-    text-decoration: none;
-    text-transform: capitalize;
-    
-}
-
-.breadcrumbs li:last-child>a {
-    background-color: 	#65737e;
-    color:   white;                      
-    padding: 8px;
-    border-radius: 16px;
-    margin-inline-start: 8px;
-}
-
-.breadcrumbs a:hover {
-    text-decoration: underline;
-    cursor: pointer;
-} 
-
-/* .breadcrumbs li:last-child>a:hover {
- 
-    cursor: default;
-} */
+    .breadcrumbs li:last-child>a:hover {
+         text-decoration: none; 
+         cursor: default;
+    }
+   
 
  header {
     position: sticky;
@@ -175,13 +104,14 @@ nav ul li a {
 
 .logo span {
     color: azure;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: ;
     font-size: 2rem;
     font-weight: 700;
     display: inline-flex;
     align-items: center;
     height: 100%;
     margin-inline-start: 2.5rem;
+    position: relative;
 } 
 
 
