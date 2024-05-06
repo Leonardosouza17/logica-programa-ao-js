@@ -11,7 +11,7 @@
 
 <body>
 
-    <a href="/html/index.html" id="ancora"> Voltar </a>
+    <a href="/index.html" id="ancora"> Voltar </a>
 
     <h1>Tabela de Identificação</h1>
 
@@ -48,11 +48,12 @@
 
             <div class="elementos-em-linha">
                 <label for="tipoCliente">cliente </label>
-                <select id="tipoCliente">
+                <input list="tipoCliente">
+                <datalist id="tipoCliente">
                     <option value="comum"> Comum</option>
                     <option value="funcionario"> Funcionário</option>
                     <option value="vip"> Vip</option>
-                </select>
+                </datalist>
 
                 <label for="valor">R$:</label>
                 <input id="valor" type="number" step="0.01" min="0.00">
@@ -86,6 +87,7 @@
 
     <script src="/javascript/tema.js"></script>
     <script src="/javascript/exercicio2.js"></script>
+    <script src="/javascript/navbar.js"></script>
 
     <script>
         document.querySelector("#btdescont").addEventListener('click', function (event) {
