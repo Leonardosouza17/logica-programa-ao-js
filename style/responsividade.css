@@ -1,0 +1,34 @@
+/*
+Estilos para outros tamanhos de telas:
+    Mobile -> até 400px
+    Tablet -> até 768px
+    TVs -> Maior que 1920
+  */
+  
+/* Mobile */
+  @media screen and (max-width: 400px) {
+
+    .titulo-pagina,
+    section,table {
+        width:80%
+    }
+
+    .elementos-em-linha,
+    .botoes {
+
+        flex-direction: column;
+
+    }
+
+
+  }
+
+  /* Tablet  */
+  @media screen and (max-width: 768px) {
+
+  }
+
+/* TVs */
+@media screen and (min-width: 1921px) {
+
+}

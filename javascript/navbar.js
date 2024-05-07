@@ -94,5 +94,5 @@ const linkNavbar = document.createElement('link');
 linkNavbar.setAttribute('rel', 'stylesheet');
 linkNavbar.setAttribute('href', '../style/navbar.css')
 
-document.head.appendChild(linkNavbar);
+document.querySelector('[href="/style/responsividade.css"]').insertAdjacentElement('beforebegin', linkNavbar);
 

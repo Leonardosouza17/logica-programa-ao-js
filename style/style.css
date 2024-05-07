@@ -54,7 +54,7 @@ th {
 section {
     background-color: var(--cor-fundo-section);
     padding: 5%;
-    margin: 10% 30% 10% 30%;
+     margin: auto;                 /*10% 30% 10% 30%;  */
     border-radius: 10px;
     box-shadow: 2px 2px 5px var(--cor-box-shadow);
     /* display: flex;  */
@@ -271,9 +271,7 @@ a:hover {
 }
 
 
-h1,
-h2,
-h3 {
+.titulo-pagina,h1,h2,h3 {
     font-family: "Raleway", sans-serif;
     text-align: center;
     font-size: medium;
@@ -283,6 +281,7 @@ h3 {
     margin: 5%;
     margin-bottom: 5%;
     padding: 7px;
+    
 }
 
 .elementos-em-linha {
