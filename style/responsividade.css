@@ -8,9 +8,16 @@ Estilos para outros tamanhos de telas:
 /* Mobile */
   @media screen and (max-width: 400px) {
 
+    .menu-navegacao {
+      display: none;
+    }
+
+  
+    }
     .titulo-pagina,
     section,table {
-        width:80%
+        width:100%;
+        
     }
 
     .elementos-em-linha,
@@ -21,10 +28,22 @@ Estilos para outros tamanhos de telas:
     }
 
 
-  }
-
+  
   /* Tablet  */
   @media screen and (max-width: 768px) {
+
+    .titulo-pagina,
+    section,table {
+        width:80%;
+    }
+
+    .elementos-em-linha,
+    .botoes {
+
+        flex-direction: column;
+
+    }
+
 
   }
 
