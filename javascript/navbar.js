@@ -1,14 +1,14 @@
 // Ancora do exercício 1
 
-const ancoras = [
+const ancoras = [ 
     { "url": "/index.html", "texto": "Home" },
-    { "url": "../html/exercicio1.html", "texto": "Exerc. 1" },
-    { "url": "../html/exercicio2.html", "texto": "Exerc. 2" },
-    { "url": "../html/exercicio3.html", "texto": "Exerc. 3" },
-    { "url": "../html/exercicio4.html", "texto": "Exerc. 4" },
-    { "url": "../html/exercicio5.html", "texto": "Exerc. 5" },
-    { "url": "../html/teste6.html", "texto": "Exerc. 6" },
-    { "url": "../html/exercicio7.html", "texto": "Exerc. 7" }
+{ "url": "../html/exercicio1.html", "texto": "Exerc. 1" },
+{ "url": "../html/exercicio2.html", "texto": "Exerc. 2" },
+{ "url": "../html/exercicio3.html", "texto": "Exerc. 3" },
+{ "url": "../html/exercicio4.html", "texto": "Exerc. 4" },
+{ "url": "../html/exercicio5.html", "texto": "Exerc. 5" },
+{ "url": "../html/teste6.html", "texto": "Exerc. 6" },
+{ "url": "../html/exercicio7.html", "texto": "Exerc. 7" }
 ];
 
 function criaAncora(url, texto) {
@@ -30,7 +30,7 @@ function criaLi(ancora) {
     return li;
 }
 
-function criaUlNav (ancoras) {
+function criaUlNav(ancoras) {
 
     const ul = document.createElement('ul');
 
@@ -41,7 +41,7 @@ function criaUlNav (ancoras) {
     });
 
     return ul;
-        
+
 
 }
 
