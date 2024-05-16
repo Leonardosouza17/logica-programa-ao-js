@@ -10,6 +10,36 @@
 
 <body>
 
+    <header>
+        <nav>
+            <div class="logo-menu">
+
+                <div class="logo">
+
+                    <span> Desafios & Exercícios</span>
+
+                </div>
+            </div>
+            <div class="menu-hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/html/exercicio1.html">Exercício 1</a></li>
+                <li><a href="/html/exercicio2.html">Exercício 2</a></li>
+                <li><a href="/html/exercicio3.html">Exercício 3</a></li>
+                <li><a href="/html/exercicio4.html">Exercício 4</a></li>
+                <li><a href="/html/exercicio5.html">Exercício 5</a></li>
+                <li><a href="/html/teste6.html">Exercício 6</a></li>
+                <li><a href="/html/exercicio7.html">Exercício 7</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
 
 
     <!-- <header>
@@ -78,119 +108,121 @@
             <li><a href="contato.html">Interfaces Web</a></li>
         </ul> -->
 
-        <nav>
-            <section>
-                <h2>Calculadora IMC</h2>
-
-                <form action="" id="formIMC">
-                    <div class="elementos-em-linha">
-                        <label for="peso"></label>
-                        <input type="number" id="peso" step="0.5" min="0" max="1000" placeholder="Peso:">
-
-                        <label for="altura"></label>
-                        <input type="number" id="altura" step="0.01" min="0" max="3" placeholder="Altura:">
-
-                    </div>
-
-                    <div id="resultadoIMC"></div>
-
-                    <div id="botoes">
-                        <button type="button" id="btCalcIMC">Calcular IMC</button>
-                        <button type="reset" id="btLimpaIMC">Limpar</button>
-                    </div>
-
-                </form>
 
 
+    <nav>
+        <section>
+            <h2>Calculadora IMC</h2>
 
-            </section>
+            <form action="" id="formIMC">
+                <div class="elementos-em-linha">
+                    <label for="peso"></label>
+                    <input type="number" id="peso" step="0.5" min="0" max="1000" placeholder="Peso:">
 
+                    <label for="altura"></label>
+                    <input type="number" id="altura" step="0.01" min="0" max="3" placeholder="Altura:">
 
-            <section>
+                </div>
 
-                <h2>Conversor de temperatura</h2>
+                <div id="resultadoIMC"></div>
 
-                <form action="">
+                <div id="botoes">
+                    <button type="button" id="btCalcIMC">Calcular IMC</button>
+                    <button type="reset" id="btLimpaIMC">Limpar</button>
+                </div>
 
-                    <label for="valorTemperatura"></label>
-                    <div class="elementos-em-linha">
-                        <input type="number" id="valorTemperatura" placeholder="Temperatura">
-
-                        <label for="escalaAtual">De:</label>
-                        <input list="escala" id="escalaAtual">
-                        <select id="escala">
-                            <option value="C" selected>Celsius</option>
-                            <option value="F">Fahrenheit</option>
-                            <option value="K">Kelvin</option>
-                        </select>
-
-
-                        <label for="escalaConvertida">Para:</label>
-                        <input list="escalas" id="escalaConvertida">
-                        <datalist id="escalas">
-                            <option value="C"> Celsius</option>
-                            <option value="F" selected>Fahrenheit</option>
-                            <option value="K">Kelvin</option>
-                        </datalist>
-                    </div>
-
-                    <div id="resultadoTemp"></div>
-
-                    <div id="botoes">
-                        <button type="button" id="btConverteTemp">Converter</button>
-                        <button type="reset" id="btLimpaTemp">Limpar</button>
-                    </div>
-                </form>
+            </form>
 
 
 
-            </section>
-        </nav>
+        </section>
 
 
-        <button type="button" id="btTrocaTema">
-            <img src="/img/lua.png" alt="">
-            <img src="/img/sol.png" alt="">
-        </button>
+        <section>
 
-        <script src="/javascript/tema.js"></script>
-        <script src="/javascript/desafio2.js"></script>
-        <script src="/javascript/desafio3.js"></script>
-        <script src="/javascript/navbar.js"></script>
+            <h2>Conversor de temperatura</h2>
 
-        <script>
+            <form action="">
 
-            document.querySelector('#btCalcIMC').addEventListener('click', function () {
-                const peso = document.querySelector('#peso').value;
-                const altura = document.querySelector('#altura').value;
-                const imc = calculaIMC(peso, altura);
-                console.log(imc);
-                // (parte de dentro do HTML) -> innerHTML
-                document.querySelector('#resultadoIMC').innerHTML = imc;
+                <label for="valorTemperatura"></label>
+                <div class="elementos-em-linha">
+                    <input type="number" id="valorTemperatura" placeholder="Temperatura">
 
-            })
-
-            document.querySelector('#btLimpaIMC').addEventListener('click', function () {
-                document.querySelector('#resultadoIMC').innerHTML = '';
-            });
+                    <label for="escalaAtual">De:</label>
+                    <input list="escala" id="escalaAtual">
+                    <select id="escala">
+                        <option value="C" selected>Celsius</option>
+                        <option value="F">Fahrenheit</option>
+                        <option value="K">Kelvin</option>
+                    </select>
 
 
-            document.querySelector('#btConverteTemp').addEventListener('click', function () {
-                const temperaturaAtual = document.querySelector('#valorTemperatura').value;
-                const escalaAtual = document.querySelector('#escalaAtual').value;
-                const escalaConverte = document.querySelector('#escalaConvertida').value;
+                    <label for="escalaConvertida">Para:</label>
+                    <input list="escalas" id="escalaConvertida">
+                    <datalist id="escalas">
+                        <option value="C"> Celsius</option>
+                        <option value="F" selected>Fahrenheit</option>
+                        <option value="K">Kelvin</option>
+                    </datalist>
+                </div>
 
-                const conversao = converteTemperatura(temperaturaAtual, escalaAtual, escalaConverte);
+                <div id="resultadoTemp"></div>
 
-                document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + conversao.escalaConverte}`;
-            });
+                <div id="botoes">
+                    <button type="button" id="btConverteTemp">Converter</button>
+                    <button type="reset" id="btLimpaTemp">Limpar</button>
+                </div>
+            </form>
 
-            document.querySelector('#btLimpaTemp').addEventListener('click', function () {
-                document.querySelector('#resultadoTemp').innerHTML = '';
-            });
 
 
-        </script>
+        </section>
+    </nav>
+
+
+    <button type="button" id="btTrocaTema">
+        <img src="/img/dia-e-noite (1).png" alt="">
+    </button>
+
+    <script src="/javascript/tema.js"></script>
+    <script src="/javascript/desafio2.js"></script>
+    <script src="/javascript/desafio3.js"></script>
+    <script src="/javascript/navbar.j"></script>
+    <script src="/javascript/menu.js"></script>
+
+    <script>
+
+        document.querySelector('#btCalcIMC').addEventListener('click', function () {
+            const peso = document.querySelector('#peso').value;
+            const altura = document.querySelector('#altura').value;
+            const imc = calculaIMC(peso, altura);
+            console.log(imc);
+            // (parte de dentro do HTML) -> innerHTML
+            document.querySelector('#resultadoIMC').innerHTML = imc;
+
+        })
+
+        document.querySelector('#btLimpaIMC').addEventListener('click', function () {
+            document.querySelector('#resultadoIMC').innerHTML = '';
+        });
+
+
+        document.querySelector('#btConverteTemp').addEventListener('click', function () {
+            const temperaturaAtual = document.querySelector('#valorTemperatura').value;
+            const escalaAtual = document.querySelector('#escalaAtual').value;
+            const escalaConverte = document.querySelector('#escalaConvertida').value;
+
+            const conversao = converteTemperatura(temperaturaAtual, escalaAtual, escalaConverte);
+
+            document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + conversao.escalaConverte}`;
+        });
+
+        document.querySelector('#btLimpaTemp').addEventListener('click', function () {
+            document.querySelector('#resultadoTemp').innerHTML = '';
+        });
+
+
+    </script>
 
 </body>
 
