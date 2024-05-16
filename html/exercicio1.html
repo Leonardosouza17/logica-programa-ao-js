@@ -5,34 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 1</title>
-    <link rel="stylesheet" href="/style/reset.css">
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/navbar.css">
+    <script src="/javascript/estilos.js"></script>
+
+
 </head>
 
 <body>
-    
+
+    <header>
+        <nav>
+            <div class="logo-menu">
+
+                <div class="logo">
+
+                    <span> Desafios & Exercícios</span>
+
+                </div>
+                <div class="menu-hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/html/exercicio1.html">Exercício 1</a></li>
+                    <li><a href="/html/exercicio2.html">Exercício 2</a></li>
+                    <li><a href="/html/exercicio3.html">Exercício 3</a></li>
+                    <li><a href="/html/exercicio4.html">Exercício 4</a></li>
+                    <li><a href="/html/exercicio5.html">Exercício 5</a></li>
+                    <li><a href="/html/teste6.html">Exercício 6</a></li>
+                    <li><a href="/html/exercicio7.html">Exercício 7</a></li>
+                </ul>
+        </nav>
+    </header>
+
     <!-- <a href="/html/index.html" id="ancora"> Voltar </a> -->
-    
+
     <h1 class="titulo-pagina">Calculador De Lados Do Triângulo</h1>
-    
+
     <section>
-        
+
         <h1>Calcule os Triângulos</h1>
         <h2>Coloque os valores aos lados correspondentes :</h2>
 
-        
+
         <form action="" id="tipoTriangulo">
             <div class="elementos-em-linha">
-                
+
                 <input type="number" id="ladoA" min="1" placeholder=" lado 1">
-                
-                
+
+
                 <input type="number" id="ladoB" min="1" placeholder=" lado 2">
-                
+
                 <input type="number" id="ladoC" min="1" placeholder=" lado 3">
             </div>
-            
+
         </form>
         <div id="resultadoTriangulo"></div>
         <div id="botoes">
@@ -40,36 +67,36 @@
             <button type="reset" id="limparTri">Limpar</button>
         </div>
     </section>
-    
+
     <button type="button" id="btTrocaTema">
-        
-        <img src="/img/lua.png" alt="">
-        <img src="/img/sol.png" alt="">
+        <img src="/img/dia-e-noite (1).png" alt="">
+
     </button>
-    
+
     <script src="/javascript/tema.js"></script>
     <script src="/javascript/exercicio1.js"></script>
-    <script src="/javascript/navbar.js"></script>
-    
-    
+    <script src="/javascript/navbar.j"></script>
+    <script src="/javascript/menu.js"></script>
+
+
     <script>
-        
+
         document.querySelector('#btTriangulo').addEventListener('click', () => { //arrow function =>
             const ladoA = document.querySelector('#ladoA').value;
             const ladoB = document.querySelector('#ladoB').value;
             const ladoC = document.querySelector('#ladoC').value;
-            
+
             const triangulos = triangulo(ladoA, ladoB, ladoC);
-            
+
             document.querySelector('#resultadoTriangulo').innerHTML = `Classificação do Triângulo: ${triangulos.mensagem}`;
         })
-        
+
         document.querySelector('#limparTri').addEventListener('click', function () {
             document.querySelector('#resultadoTriangulo').innerHTML = "";
         })
-        
-        
-        </script>
+
+
+    </script>
 
 
 
