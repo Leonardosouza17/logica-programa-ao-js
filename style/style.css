@@ -24,10 +24,7 @@ table {
     border-collapse: collapse;
     width: 40%;
     margin-top: 6%;
-    /* display: flex; */
     justify-content: center;
-    /* align-items: center; */
-    /* border-radius: 10px; */
     margin-left: 30%;
 
 
@@ -53,15 +50,18 @@ th {
 
 section {
     background-color: var(--cor-fundo-section);
-     padding: 5%; 
-    margin: 3%;
+    padding: 5%; 
+    margin-left:30%; 
+    margin-bottom: 10%;
+    margin-top: 5%;
     border-radius: 10px;
     box-shadow: 2px 2px 5px var(--cor-box-shadow);
-    /* display: flex;  */
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 30%;
+
 
 
 }
@@ -228,7 +228,7 @@ a:hover {
 
     padding: 10px 10px 10px 10px;
     background-color: var(--cor-fundo-ancora);
-    color: var(---cor-primaria-texto);
+    color: var(--cor-titulo);
     text-decoration: none;
     border: none;
     border-radius: 50px;
@@ -244,6 +244,11 @@ a:hover {
 
 }
 
+
+
+
+
+
 #btTrocaTema:hover {
     transform: scale(1.1);
 }
@@ -253,7 +258,8 @@ a:hover {
 }
 
 #btTrocaTema img {
-    height: 20px;
+    width: 2rem;
+    /* height: 20px; */
     justify-content: center;
 
 }
@@ -310,6 +316,7 @@ a:hover {
 }
 
 [data-tema="dark"] {
+    --menu-hamburger:#999999;
     --plano-fundo: #232b2b;
     ---cor-primaria-texto: #cacfd5;
     --cor-fundo-tags: black;
@@ -326,6 +333,7 @@ a:hover {
 }
 
 [data-tema="light"] {
+    --menu-hamburger:	#009688;
     --plano-fundo: #b2d8d8;
     ---cor-primaria-texto: #3b444b;
     --cor-fundo-tags: #d3ffc;

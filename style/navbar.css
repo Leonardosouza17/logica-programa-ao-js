@@ -2,70 +2,10 @@
     min-height: 100vh;
     background-color: 	#e5e6eb; */
 
-    .breadcrumbs {
-        height: 50px;
-    }
-    
-    .breadcrumbs>ul {
-        height: 100%;
-        display: flex;
-        margin-inline-start: 1.5rem;
-        margin-top: 1%;
-        
-    }
-    
-    .breadcrumbs li {
-        display: inline-flex;
-        align-items: center;
-        height: 100%;
-    }
-    
-    .breadcrumbs li:not(:last-child):after {
-        content: "→";
-    }
-    /* aplica para todos os elementos, menos (não) para o último filho */
-    
-    /* .breadcrumbs li:last-child:after {
-        content: "";
-    } */
-    
-    .breadcrumbs li:not(:last-child)>a {
-        color: white;
-        
-    }
-    
-    .breadcrumbs a {
-        display: inline-flex;
-        align-items: center;
-        /* height: 100%; */
-        padding: 0 1rem;
-        font-family: "Josefin Sans", sans-serif;
-        text-decoration: none;
-        text-transform: capitalize;
-        /* color: #777; */
-    }
-    
-    .breadcrumbs li:last-child>a {
-        background-color: 	#65737e;  
-        color:   white;                      
-        padding: 8px;
-        border-radius: 16px;
-        margin-inline-start: 8px;
-    }
-    
-       .breadcrumbs a:hover {
-        text-decoration: underline;
-        cursor: pointer; 
-     }
-    
-    
-    .breadcrumbs li:last-child>a:hover {
-         text-decoration: none; 
-         cursor: default;
-    }
+
    
 
- header {
+ /* header {
     position: sticky;
     top: 0;
     justify-content: space-evenly;
@@ -104,7 +44,6 @@ nav ul li a {
 
 .logo span {
     color: azure;
-    font-family: ;
     font-size: 2rem;
     font-weight: 700;
     display: inline-flex;
@@ -115,52 +54,12 @@ nav ul li a {
 } 
 
 
-/* .menu {
-    position: right;
-}
-
-.arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid white;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.menu:hover ul {
-    opacity: 1;
-    visibility: visible;
-}
-
-.menu ul li {
-    padding: 10px;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-}
 
 .menu ul li a:hover {
     color: white;
-} */
+}  */
+
+
+
+
 
