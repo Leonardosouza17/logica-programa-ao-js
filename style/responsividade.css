@@ -6,7 +6,7 @@ Estilos para outros tamanhos de telas:
   */
   
 /* Mobile */
- /* @media screen and (max-width: 400px) {
+  @media screen and (max-width: 400px) {
 
     .menu-navegacao {
       display: none;
@@ -16,7 +16,8 @@ Estilos para outros tamanhos de telas:
     }
     .titulo-pagina,
     section,table {
-        width:100%;
+         
+        grid-template-columns: 1fr;
         
     }
 
@@ -25,16 +26,17 @@ Estilos para outros tamanhos de telas:
 
         flex-direction: column;
  
-    } */
+    } 
 
 
   
   /* Tablet  */
-  /* @media screen and (max-width: 768px) {
+   @media screen and (max-width: 768px) {
 
     .titulo-pagina,
     section,table {
-        width:80%;
+        
+        /* grid-template-columns: repeat(2, 1fr); */
     }
 
     .elementos-em-linha,
